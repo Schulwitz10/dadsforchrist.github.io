@@ -1,58 +1,116 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home • Dads for Christ</title>
-<link rel="stylesheet" href="style.css">
-</head><body>
-
-<header>
-  <nav>
-    <a class="active" href="index.html">Home</a>
-    <a  href="podcast.html">Podcast</a>
-    <a  href="i-said-yes.html">I Said Yes</a>
-    <a  href="bible.html">Request a Bible</a>
-    <a  href="find-church.html">Find a Church</a>
-    <a  href="about.html">About & Beliefs</a>
-    <a  href="donate.html">Donate</a>
-    <a  href="devotionals.html">Devotionals</a>
-    <a  href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<main class="container">
-
-<section class="hero">
-  <img src="assets/logo.png" alt="Dads for Christ">
-  <div>
-    <h1 class="hero-title">Dads for Christ</h1>
-    <div class="hero-tag">Calling fathers and families back to Jesus</div>
-    <p><span class="badge">Mission</span></p>
-    <p><strong>Dads for Christ exists</strong> to call fathers and families back to Jesus, bringing hope and faith into homes, restoring strength to struggling dads, and reviving the American family through the love of our Savior.</p>
-    <div class="actions">
-      <a class="btn" href="podcast.html">Listen to the Podcast</a>
-      <a class="btn alt" href="i-said-yes.html">I Said Yes to Jesus</a>
-      <a class="btn" href="bible.html">Request a Free KJV Bible</a>
-      <a class="btn" href="find-church.html">Find a Church</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dads for Christ</title>
+  <meta name="description" content="Dads for Christ — calling fathers and families back to Jesus." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">✚</div>
+        <span class="brand__name">Dads for <span class="gold">Christ</span></span>
+      </div>
+      <nav class="menu">
+        <a href="#podcast">Podcast</a>
+        <a href="#mission">Mission</a>
+        <a href="#isaidyes">I Said Yes</a>
+        <a href="#bible">Free Bible</a>
+        <a href="#give" class="btn btn--gold">Donate</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<hr class="soft">
-<section class="grid">
-  <div class="card">
-    <h2>Who we are</h2>
-    <p>We’re two brothers—normal, imperfect dads saved by grace—learning to lead our families with Christ at the center. We’re not pastors or teachers; we’re fellow travelers pointing one another back to Jesus.</p>
-  </div>
-  <div class="card">
-    <h2>What to expect</h2>
-    <ul class="clean">
-      <li>Real conversations for dads and families</li>
-      <li>Scripture and practical steps you can use this week</li>
-      <li>Help connecting to a local church</li>
-    </ul>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <h1 class="title">Calling fathers and families back to <span class="gold">Jesus</span></h1>
+        <p class="lead">
+          We’re two brothers—real dads saved by grace—helping men lead their homes with Christ at the center.
+          We believe the Bible is God’s Word and that Jesus died and rose again.
+        </p>
+        <div class="cta">
+          <a class="btn btn--gold" href="#podcast">▶ Listen to the Podcast</a>
+          <a class="btn" href="#mission">Our Mission</a>
+        </div>
+      </div>
+      <div class="hero__card">
+        <h3>New here?</h3>
+        <p>Start with the welcome episode and see what Dads for Christ is all about.</p>
+        <a class="btn btn--ghost" href="#podcast">Play Latest</a>
+      </div>
+    </div>
+  </section>
 
-</main>
-<footer class="container">© <span id="y"></span> Dads for Christ • Real dads saved by grace — calling families back to Jesus.</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body></html>
+  <!-- SECTIONS -->
+  <main class="container sections">
+    <section id="mission" class="card">
+      <h2>Mission</h2>
+      <p><strong>Dads for Christ</strong> exists to call fathers and families back to Jesus, bringing hope and faith into homes, restoring strength to struggling dads, and reviving the American family through the love of our Savior.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card" id="isaidyes">
+        <h3>I Said Yes to Jesus</h3>
+        <p>If you prayed to receive Christ, we want to celebrate and help with next steps.</p>
+        <a class="btn btn--gold" href="#contact">Tell Us You Said Yes</a>
+      </div>
+      <div class="card" id="bible">
+        <h3>Request a Free Bible</h3>
+        <p>No app replaces God’s Word in your hands. We’ll mail you a KJV Bible.</p>
+        <a class="btn btn--ghost" href="#contact">Request a Bible</a>
+      </div>
+      <div class="card" id="podcast">
+        <h3>Podcast</h3>
+        <p>Honest conversations, Scripture, and practical steps for the week.</p>
+        <div class="stack">
+          <a class="chip" href="#">Spotify</a>
+          <a class="chip" href="#">Apple Podcasts</a>
+          <a class="chip" href="#">YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="give" class="card">
+      <h2>Support the Movement</h2>
+      <p>Your gift helps send Bibles, equip dads, and share the gospel.</p>
+      <div class="cta">
+        <a class="btn btn--gold" href="#">Give Monthly</a>
+        <a class="btn btn--ghost" href="#">One-Time Gift</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>About</h2>
+      <p>We’re brothers and everyday dads—not pastors or professors—walking with Jesus and sharing what we’re learning. Statement of Faith: the Bible is God’s Word; Jesus is the Son of God who died for our sins and rose again; salvation is by grace through faith; every home needs Christ at the center.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Email us your prayer requests, testimonies, or questions. We’d love to hear from you.</p>
+      <p><a class="btn btn--ghost" href="mailto:info@dadsforchrist.org">info@dadsforchrist.org</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Dads for Christ</span>
+      <div class="social">
+        <a href="#" aria-label="YouTube">YouTube</a>
+        <a href="#" aria-label="Spotify">Spotify</a>
+        <a href="#" aria-label="Apple Podcasts">Apple</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
