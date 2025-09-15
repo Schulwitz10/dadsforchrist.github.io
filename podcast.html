@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Podcast • Dads for Christ</title>
+  <meta name="description" content="Listen to the Dads for Christ podcast on Spotify, Apple, and YouTube." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
+      <nav class="menu">
+        <a href="index.html#mission">Mission</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a class="btn-nav" href="bible.html">Free Bible</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Podcast</h2>
+      <p>Find us on your favorite platform or listen below.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+        <a class="btn-gold" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn-dark" href="https://podcasts.apple.com/" target="_blank" rel="noopener">Apple Podcasts</a>
+        <a class="btn-dark" href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+        <!-- Add your RSS link when ready -->
+        <a class="btn-dark" href="#" target="_blank" rel="noopener">RSS</a>
+      </div>
+
+      <!-- Example Spotify embed (replace with your show link/embed code) -->
+      <div style="margin-top:1rem;">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/SHOW_ID?utm_source=generator"
+          width="100%" height="232" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Dads for Christ</p>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
