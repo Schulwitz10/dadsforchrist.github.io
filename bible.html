@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Free Bible • Dads for Christ</title>
+  <meta name="description" content="Request a free KJV Bible. We’ll mail one to you." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
+      <nav class="menu">
+        <a href="index.html#podcast">Podcast</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a class="btn-nav" href="index.html#give">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Request a Free Bible (KJV)</h2>
+      <p>We believe a physical Bible is invaluable. Fill this out and we’ll send one to you. If you’re outside the U.S., we’ll try to connect you with a local distributor or provide a digital option.</p>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree ID -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top:1rem;">
+        <label>Full Name<br/>
+          <input type="text" name="name" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
+        </label>
+        <label>Email<br/>
+          <input type="email" name="_replyto" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
+        </label>
+        <label>Shipping Address<br/>
+          <textarea name="address" rows="4" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;"></textarea>
+        </label>
+        <label>Country<br/>
+          <input type="text" name="country" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
+        </label>
+        <label>Anything else we should know?<br/>
+          <textarea name="notes" rows="3" style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;"></textarea>
+        </label>
+        <input type="hidden" name="page" value="Bible Request">
+        <button class="btn-gold" type="submit">Request Bible</button>
+      </form>
+
+      <p style="margin-top:1rem;color:#b7c1c9;">If you can help cover shipping or sponsor Bibles, <a href="index.html#give" style="color:#FFD700;">donate here</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Dads for Christ</p>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
