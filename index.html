@@ -6,106 +6,114 @@
   <title>Dads for Christ</title>
   <meta name="description" content="Dads for Christ — calling fathers and families back to Jesus." />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ====== RESET ====== */
+    body, h1, h2, h3, p, a { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #0c0c0c; color: #f1f1f1; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ====== NAV ====== */
+    header { background: #111; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 1.4rem; font-weight: bold; color: #FFD700; }
+    .menu a { margin: 0 0.8rem; color: #fff; transition: color 0.2s; }
+    .menu a:hover { color: #FFD700; }
+    .btn-nav { background: #FFD700; padding: 0.4rem 1rem; border-radius: 4px; color: #000; font-weight: bold; }
+
+    /* ====== HERO ====== */
+    .hero { text-align: center; padding: 3rem 1rem; background: linear-gradient(to bottom, #000, #111); }
+    .hero img { max-width: 280px; border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.6); margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 2.2rem; color: #fff; margin-bottom: 1rem; }
+    .hero h1 span { color: #FFD700; }
+    .hero p { max-width: 700px; margin: 0 auto 1.5rem; }
+    .hero .cta a { display: inline-block; margin: 0.5rem; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    .btn-gold { background: #FFD700; color: #000; }
+    .btn-dark { background: #222; color: #FFD700; border: 1px solid #FFD700; }
+
+    /* ====== SECTIONS ====== */
+    .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
+    section { margin-bottom: 2rem; background: #1a1a1a; padding: 2rem; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); }
+    section h2 { color: #FFD700; margin-bottom: 1rem; }
+    section p { margin-bottom: 1rem; }
+
+    /* ====== FOOTER ====== */
+    footer { background: #111; color: #ccc; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    footer a { margin: 0 0.5rem; color: #FFD700; }
+  </style>
 </head>
 <body>
   <!-- NAV -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <div class="brand">
-        <div class="brand__mark" aria-hidden="true">✚</div>
-        <span class="brand__name">Dads for <span class="gold">Christ</span></span>
-      </div>
+  <header>
+    <div class="nav">
+      <div class="brand">✚ Dads for <span style="color:white;">Christ</span></div>
       <nav class="menu">
         <a href="#podcast">Podcast</a>
         <a href="#mission">Mission</a>
         <a href="#isaidyes">I Said Yes</a>
         <a href="#bible">Free Bible</a>
-        <a href="#give" class="btn btn--gold">Donate</a>
+        <a href="#give" class="btn-nav">Donate</a>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero__inner">
-      <div>
-        <h1 class="title">Calling fathers and families back to <span class="gold">Jesus</span></h1>
-        <p class="lead">
-          We’re two brothers—real dads saved by grace—helping men lead their homes with Christ at the center.
-          We believe the Bible is God’s Word and that Jesus died and rose again.
-        </p>
-        <div class="cta">
-          <a class="btn btn--gold" href="#podcast">▶ Listen to the Podcast</a>
-          <a class="btn" href="#mission">Our Mission</a>
-        </div>
-      </div>
-      <div class="hero__card">
-        <h3>New here?</h3>
-        <p>Start with the welcome episode and see what Dads for Christ is all about.</p>
-        <a class="btn btn--ghost" href="#podcast">Play Latest</a>
-      </div>
+    <img src="cover.png" alt="Dads for Christ Podcast Cover" />
+    <h1>Calling fathers and families back to <span>Jesus</span></h1>
+    <p>We’re two brothers—real dads saved by grace—helping men lead their homes with Christ at the center. 
+       Join us as we share honest conversations, practical steps, and the hope of the gospel.</p>
+    <div class="cta">
+      <a class="btn-gold" href="#podcast">▶ Listen to the Podcast</a>
+      <a class="btn-dark" href="#mission">Our Mission</a>
     </div>
   </section>
 
-  <!-- SECTIONS -->
-  <main class="container sections">
-    <section id="mission" class="card">
+  <!-- CONTENT SECTIONS -->
+  <main class="container">
+    <section id="mission">
       <h2>Mission</h2>
       <p><strong>Dads for Christ</strong> exists to call fathers and families back to Jesus, bringing hope and faith into homes, restoring strength to struggling dads, and reviving the American family through the love of our Savior.</p>
     </section>
 
-    <section class="grid">
-      <div class="card" id="isaidyes">
-        <h3>I Said Yes to Jesus</h3>
-        <p>If you prayed to receive Christ, we want to celebrate and help with next steps.</p>
-        <a class="btn btn--gold" href="#contact">Tell Us You Said Yes</a>
-      </div>
-      <div class="card" id="bible">
-        <h3>Request a Free Bible</h3>
-        <p>No app replaces God’s Word in your hands. We’ll mail you a KJV Bible.</p>
-        <a class="btn btn--ghost" href="#contact">Request a Bible</a>
-      </div>
-      <div class="card" id="podcast">
-        <h3>Podcast</h3>
-        <p>Honest conversations, Scripture, and practical steps for the week.</p>
-        <div class="stack">
-          <a class="chip" href="#">Spotify</a>
-          <a class="chip" href="#">Apple Podcasts</a>
-          <a class="chip" href="#">YouTube</a>
-        </div>
-      </div>
+    <section id="isaidyes">
+      <h2>I Said Yes to Jesus</h2>
+      <p>If you prayed to receive Christ, we want to celebrate and walk with you in next steps.</p>
+      <a class="btn-gold" href="#contact">Tell Us You Said Yes</a>
     </section>
 
-    <section id="give" class="card">
+    <section id="bible">
+      <h2>Request a Free Bible</h2>
+      <p>No app replaces God’s Word in your hands. We’ll mail you a free KJV Bible to help you grow.</p>
+      <a class="btn-dark" href="#contact">Request a Bible</a>
+    </section>
+
+    <section id="podcast">
+      <h2>Podcast</h2>
+      <p>Honest conversations, Scripture, and practical steps for the week.</p>
+      <a class="btn-gold" href="#">Spotify</a>
+      <a class="btn-dark" href="#">Apple Podcasts</a>
+      <a class="btn-dark" href="#">YouTube</a>
+    </section>
+
+    <section id="give">
       <h2>Support the Movement</h2>
       <p>Your gift helps send Bibles, equip dads, and share the gospel.</p>
-      <div class="cta">
-        <a class="btn btn--gold" href="#">Give Monthly</a>
-        <a class="btn btn--ghost" href="#">One-Time Gift</a>
-      </div>
+      <a class="btn-gold" href="#">Give Monthly</a>
+      <a class="btn-dark" href="#">One-Time Gift</a>
     </section>
 
-    <section class="card">
-      <h2>About</h2>
-      <p>We’re brothers and everyday dads—not pastors or professors—walking with Jesus and sharing what we’re learning. Statement of Faith: the Bible is God’s Word; Jesus is the Son of God who died for our sins and rose again; salvation is by grace through faith; every home needs Christ at the center.</p>
-    </section>
-
-    <section id="contact" class="card">
+    <section id="contact">
       <h2>Contact</h2>
       <p>Email us your prayer requests, testimonies, or questions. We’d love to hear from you.</p>
-      <p><a class="btn btn--ghost" href="mailto:info@dadsforchrist.org">info@dadsforchrist.org</a></p>
+      <p><a class="btn-dark" href="mailto:info@dadsforchrist.org">info@dadsforchrist.org</a></p>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <span>© <span id="year"></span> Dads for Christ</span>
-      <div class="social">
-        <a href="#" aria-label="YouTube">YouTube</a>
-        <a href="#" aria-label="Spotify">Spotify</a>
-        <a href="#" aria-label="Apple Podcasts">Apple</a>
-      </div>
+  <footer>
+    <p>© <span id="year"></span> Dads for Christ • Real dads saved by grace</p>
+    <div>
+      <a href="#">YouTube</a> | <a href="#">Spotify</a> | <a href="#">Apple</a>
     </div>
   </footer>
 
@@ -114,3 +122,4 @@
   </script>
 </body>
 </html>
+
