@@ -1,73 +1,118 @@
-/* ===== Color System ===== */
-:root{
-  --black: #0b0f12;
-  --black-2:#12171c;
-  --ink: #161b22;
-  --gold: #d4af37;
-  --gold-2:#f2d675;
-  --text: #e9eef2;
-  --muted:#b7c1c9;
-  --card: #0f1419;
-  --line: rgba(255,255,255,.08);
-  --shadow: 0 12px 28px rgba(0,0,0,.35);
-  --radius: 16px;
+/* ====== RESET ====== */
+body, h1, h2, h3, p, a { margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #0c0c0c;
+  color: #f1f1f1;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ====== NAV ====== */
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #FFD700;
+}
+.menu a {
+  margin: 0 0.8rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+.menu a:hover {
+  color: #FFD700;
+}
+.btn-nav {
+  background: #FFD700;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  color: #000;
+  font-weight: bold;
 }
 
-* { box-sizing: border-box; }
-html,body { margin:0; padding:0; background: var(--black); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
-a { color: var(--gold); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.container { width: min(1100px, 92%); margin: 0 auto; }
+/* ====== HERO ====== */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #000, #111);
+}
+.hero img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.6);
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.hero h1 span {
+  color: #FFD700;
+}
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+}
+.hero .cta a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btn-gold {
+  background: #FFD700;
+  color: #000;
+}
+.btn-dark {
+  background: #222;
+  color: #FFD700;
+  border: 1px solid #FFD700;
+}
 
-/* ===== Nav ===== */
-.nav { position: sticky; top:0; z-index: 50; backdrop-filter: blur(8px); background: rgba(18,23,28,.7); border-bottom: 1px solid var(--line); }
-.nav__inner { display:flex; align-items:center; justify-content:space-between; padding: 12px 0; }
-.brand { display:flex; align-items:center; gap:10px; }
-.brand__mark { width:28px; height:28px; border:2px solid var(--gold); color:var(--gold); display:grid; place-items:center; border-radius:8px; font-weight:900; }
-.brand__name { font-weight:800; letter-spacing:.6px; }
-.gold { color: var(--gold); }
-.menu { display:flex; gap:14px; align-items:center; }
-.menu a { color: var(--text); padding:8px 10px; border-radius:10px; }
-.menu a:hover { background: rgba(255,255,255,.06); }
+/* ====== SECTIONS ====== */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+section {
+  margin-bottom: 2rem;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+}
+section h2 {
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+section p {
+  margin-bottom: 1rem;
+}
 
-/* Buttons */
-.btn { display:inline-flex; align-items:center; gap:8px; padding:12px 16px; border-radius:12px; border:1px solid var(--line); color:var(--text); background: transparent; font-weight:700; transition: .15s transform, .15s box-shadow, .15s border-color; }
-.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); border-color: var(--gold); text-decoration:none; }
-.btn--gold { background: var(--gold); color:#222; border-color: transparent; }
-.btn--gold:hover { background: var(--gold-2); }
-.btn--ghost { background: rgba(255,255,255,.04); }
-
-/* ===== Hero ===== */
-.hero { position: relative; background: radial-gradient(1200px 600px at 20% -10%, rgba(212,175,55,.25), transparent 60%), linear-gradient(180deg, var(--black-2), var(--black)); }
-.hero__inner { display:grid; grid-template-columns: 1.2fr .8fr; gap:26px; padding: 84px 0 56px; align-items:center; }
-@media (max-width:900px){ .hero__inner{ grid-template-columns: 1fr; padding: 64px 0 40px; } }
-
-.title { font-size: clamp(34px, 6vw, 64px); line-height:1.05; margin:0 0 10px; font-weight:900; }
-.lead { color: var(--muted); font-size: clamp(16px, 2.2vw, 18px); margin:0 0 18px; }
-.cta { display:flex; flex-wrap:wrap; gap:12px; }
-
-.hero__card { background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); border:1px solid var(--line); border-radius: var(--radius); padding:22px; box-shadow: var(--shadow); }
-.hero__card h3 { margin:0 0 6px; }
-.hero__card p { color: var(--muted); margin:0 0 12px; }
-
-/* ===== Sections ===== */
-.sections { padding: 34px 0; }
-.card { background: var(--card); border:1px solid var(--line); border-radius: var(--radius); padding:22px; box-shadow: var(--shadow); }
-.card + .card { margin-top: 18px; }
-.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; margin-top:18px; }
-@media (max-width:900px){ .grid{ grid-template-columns: 1fr; } }
-
-h2 { margin: 0 0 10px; font-size: 28px; letter-spacing:.4px; }
-h3 { margin:0 0 8px; }
-
-/* Chips */
-.stack { display:flex; gap:10px; flex-wrap:wrap; }
-.chip { display:inline-flex; padding:8px 12px; border-radius:999px; border:1px solid var(--line); color:var(--text); background: rgba(255,255,255,.04); }
-.chip:hover { border-color: var(--gold); text-decoration:none; }
-
-/* ===== Footer ===== */
-.footer { border-top:1px solid var(--line); margin-top:32px; background: var(--ink); }
-.footer__inner { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 0; color: var(--muted); }
-.footer .social { display:flex; gap:12px; }
-.footer .social a { color: var(--text); border:1px solid var(--line); padding:8px 12px; border-radius:10px; }
-.footer .social a:hover { border-color: var(--gold); }
+/* ====== FOOTER ====== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  margin: 0 0.5rem;
+  color: #FFD700;
+}
