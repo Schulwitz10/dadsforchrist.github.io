@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>I Said Yes to Jesus • Dads for Christ</title>
-  <meta name="description" content="Tell us you said yes to Jesus. We’ll celebrate and help with next steps." />
+  <title>I Said Yes • Dads for Christ</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
+  <header class="nav">
+    <div class="container nav__inner">
+      <div class="brand">
+        ✚ Dads for <span class="gold">Christ</span>
+      </div>
       <nav class="menu">
-        <a href="index.html#podcast">Podcast</a>
-        <a href="index.html#mission">Mission</a>
-        <a class="btn-nav" href="bible.html">Free Bible</a>
+        <a href="index.html">Home</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section>
+  <main class="container sections">
+    <section class="card">
       <h2>I Said Yes to Jesus</h2>
-      <p>We’re rejoicing with you! Share a few details so we can pray for you and help with your next steps (Bible, a solid local church, and helpful resources).</p>
+      <p>If you prayed to receive Christ, we’d love to celebrate with you and help you take your next steps in faith.</p>
 
-      <!-- Replace YOUR_FORM_ID with your Formspree ID -->
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top:1rem;">
-        <label>Full Name<br/>
-          <input type="text" name="name" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>Email<br/>
-          <input type="email" name="_replyto" required style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>City / State (or Country)<br/>
-          <input type="text" name="location" style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>Tell us briefly what God did today<br/>
-          <textarea name="story" rows="5" style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;"></textarea>
-        </label>
-        <div style="margin:.6rem 0;">
-          <label><input type="checkbox" name="need_bible" value="yes"> I need a Bible</label><br/>
-          <label><input type="checkbox" name="help_church" value="yes"> Help me find a local church</label>
-        </div>
-        <input type="hidden" name="page" value="I Said Yes">
-        <button class="btn-gold" type="submit">Send</button>
+      <form action="https://formspree.io/f/mdklrnwp" method="POST" class="form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Tell us about your decision</label>
+        <textarea id="message" name="message" rows="4" placeholder="I said yes to Jesus today..." required></textarea>
+
+        <button type="submit" class="btn btn--gold">Submit</button>
       </form>
-
-      <p style="margin-top:1rem;color:#b7c1c9;">We’ll email you within 24–48 hours with encouragement and next steps.</p>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© <span id="year"></span> Dads for Christ</p>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
