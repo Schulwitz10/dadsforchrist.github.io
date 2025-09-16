@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donate • Dads for Christ</title>
+  <meta name="description" content="Support Dads for Christ with a one-time gift or monthly partnership." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
+      <nav class="menu">
+        <a href="index.html#mission">Mission</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="bible.html">Free Bible</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Support the Movement</h2>
+      <p>Your gift helps us share the gospel, send Bibles, and equip dads to lead with Christ at the center.</p>
+
+      <!-- Suggested quick amounts (they just visually suggest; actual amount is set on Stripe page) -->
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:.75rem 0;">
+        <span class="chip">$10</span>
+        <span class="chip">$25</span>
+        <span class="chip">$50</span>
+        <span class="chip">$100</span>
+        <span class="chip">$250</span>
+      </div>
+
+      <div class="cta" style="gap:12px;flex-wrap:wrap;">
+        <!-- Replace these two links with your Stripe Payment Links (or PayPal/Donorbox links) -->
+        <a class="btn btn--gold" href="https://buy.stripe.com/YOUR_ONETIME_LINK" target="_blank" rel="noopener">
+          Give a One-Time Gift
+        </a>
+        <a class="btn" href="https://buy.stripe.com/YOUR_MONTHLY_LINK" target="_blank" rel="noopener">
+          Become a Monthly Partner
+        </a>
+      </div>
+
+      <p style="margin-top:1rem;color:#b7c1c9;">
+        We’re not handling card data on our site. Your payment is processed securely by our provider.
+        <!-- If you are NOT yet a 501(c)(3) say this: -->
+        Gifts are currently <strong>not tax-deductible</strong> until our 501(c)(3) approval is complete.
+      </p>
+    </section>
+
+    <!-- Optional: PayPal as a second option -->
+    <!--
+    <section class="card">
+      <h3>Prefer PayPal?</h3>
+      <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=YOUR_ID" target="_blank" rel="noopener">
+        Donate via PayPal
+      </a>
+    </section>
+    -->
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Dads for Christ</span>
+      <div class="social">
+        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
