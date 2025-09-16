@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Podcast • Dads for Christ</title>
-  <meta name="description" content="Listen to the Dads for Christ podcast on Spotify, Apple, and YouTube." />
+  <meta name="description" content="Watch and listen to the Dads for Christ podcast on YouTube, Spotify, and Apple." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="nav">
       <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
@@ -19,30 +20,45 @@
     </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="container">
     <section>
       <h2>Podcast</h2>
-      <p>Find us on your favorite platform or listen below.</p>
+      <p>Find us on your favorite platform or watch the latest episode below.</p>
 
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;">
+      <!-- Platform buttons -->
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:1rem 0;">
         <a class="btn-gold" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
         <a class="btn-dark" href="https://podcasts.apple.com/" target="_blank" rel="noopener">Apple Podcasts</a>
-        <a class="btn-dark" href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
-        <!-- Add your RSS link when ready -->
-        <a class="btn-dark" href="#" target="_blank" rel="noopener">RSS</a>
+        <a class="btn-dark" href="https://youtube.com/@YOURCHANNEL" target="_blank" rel="noopener">YouTube Channel</a>
       </div>
 
-      <!-- Example Spotify embed (replace with your show link/embed code) -->
-      <div style="margin-top:1rem;">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/SHOW_ID?utm_source=generator"
-          width="100%" height="232" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      <!-- YouTube embed -->
+      <div style="margin-top:1.5rem;">
+        <iframe width="100%" height="420"
+          src="https://www.youtube.com/embed/VZ94_-XJRdU"
+          title="Dads for Christ Podcast Episode 1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- Future episodes -->
+      <div style="margin-top:2rem;">
+        <h3>More Episodes Coming Soon</h3>
+        <p>Stay tuned for new conversations and teaching as we release more episodes of Dads for Christ.</p>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <p>© <span id="year"></span> Dads for Christ</p>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
