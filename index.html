@@ -5,227 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dads for Christ</title>
   <meta name="description" content="Dads for Christ — calling fathers and families back to Jesus." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Keep your sitewide styles so other pages stay the same -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Home-page-only styles (scoped with .home- so other pages are unchanged) -->
   <style>
-    /* ===== Base / Theme ===== */
     :root{
-      --bg:#0b0b0b;
-      --bg-2:#121212;
-      --panel:#171717;
-      --text:#f2f2f2;
-      --muted:#cfcfcf;
-      --gold:#ffd400;         /* strong, readable gold */
-      --gold-700:#b89b00;     /* hover outline depth */
-      --ring:rgba(255,212,0,.25);
-      --radius:14px;
-      --shadow:0 14px 40px rgba(0,0,0,.55);
+      --home-bg:#0b0b0b;
+      --home-bg2:#121212;
+      --home-panel:#171717;
+      --home-text:#f2f2f2;
+      --home-muted:#cfcfcf;
+      --home-gold:#ffd400;
+      --home-gold-700:#b89b00;
+      --home-ring:rgba(255,212,0,.25);
+      --home-radius:14px;
+      --home-shadow:0 14px 40px rgba(0,0,0,.55);
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
-      background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%);
-      color:var(--text);
-      line-height:1.55;
-      -webkit-font-smoothing:antialiased;  text-rendering:optimizeLegibility;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
+    /* container helper (won't clash with your style.css) */
+    .home-container{max-width:1120px;margin-inline:auto;padding:0 20px}
 
-    /* ===== Layout helpers ===== */
-    .container{max-width:1120px;margin-inline:auto;padding:0 20px}
-    .stack-24>*+*{margin-top:24px}
-    .grid{display:grid;gap:20px}
-    @media (min-width:960px){
-      .grid-2{grid-template-columns:1.05fr .95fr}
-      .grid-4{grid-template-columns:repeat(4,1fr)}
-    }
-
-    /* ===== Header / Nav ===== */
-    header{
+    /* Header (scoped) */
+    .home-header{
       position:sticky; top:0; z-index:50;
-      background:rgba(0,0,0,.65);
-      backdrop-filter: blur(10px);
+      background:rgba(0,0,0,.65); backdrop-filter: blur(10px);
       border-bottom:1px solid #1e1e1e;
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{
-      display:flex;align-items:center;gap:10px;
-      font-weight:800; letter-spacing:.2px;
-    }
-    .brand .mark{
+    .home-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .home-brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;color:var(--home-text)}
+    .home-mark{
       width:28px;height:28px;display:grid;place-items:center;
-      border-radius:10px;background:var(--gold); color:#000; font-weight:900;
-      box-shadow:0 6px 14px var(--ring);
+      border-radius:10px;background:var(--home-gold); color:#000; font-weight:900;
+      box-shadow:0 6px 14px var(--home-ring);
     }
-    .brand .name{font-size:1.15rem}
-    nav.menu{display:flex;gap:10px;flex-wrap:wrap}
-    .pill{
-      background:var(--gold); color:#000; font-weight:800;
+    .home-name{font-size:1.15rem}
+    .home-menu{display:flex;gap:10px;flex-wrap:wrap}
+    .home-pill{
+      background:var(--home-gold); color:#000; font-weight:800;
       padding:10px 14px;border-radius:999px; display:inline-flex;align-items:center;gap:8px;
-      border:2px solid transparent; box-shadow:0 8px 18px var(--ring);
-      transform:translateY(0); transition:all .18s ease;
-      white-space:nowrap;
+      border:2px solid transparent; box-shadow:0 8px 18px var(--home-ring);
+      transform:translateY(0); transition:all .18s ease; white-space:nowrap;
     }
-    .pill:hover{transform:translateY(-1px); box-shadow:0 12px 24px var(--ring); border-color:var(--gold-700)}
-    .pill:active{transform:translateY(0)}
+    .home-pill:hover{transform:translateY(-1px); box-shadow:0 12px 24px var(--home-ring); border-color:var(--home-gold-700)}
 
-    /* ===== Hero ===== */
-    .hero{
-      padding:48px 0 24px;
-      border-bottom:1px solid #1c1c1c;
-      background:
-        radial-gradient(1200px 400px at 20% -10%, rgba(255,212,0,.07), transparent 60%),
-        radial-gradient(1200px 500px at 110% -10%, rgba(255,212,0,.06), transparent 60%);
+    /* Hero (scoped) */
+    .home-hero{
+      color:var(--home-text);
+      background:linear-gradient(180deg,var(--home-bg) 0%,var(--home-bg2) 100%),
+                 radial-gradient(1200px 400px at 20% -10%, rgba(255,212,0,.07), transparent 60%),
+                 radial-gradient(1200px 500px at 110% -10%, rgba(255,212,0,.06), transparent 60%);
+      padding:48px 0 24px; border-bottom:1px solid #1c1c1c;
     }
-    .hero-inner{display:grid;gap:28px;align-items:center}
-    @media (min-width:960px){ .hero-inner{grid-template-columns:1fr .95fr} }
-    .eyebrow{color:var(--gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
-    h1.title{font-size:clamp(2rem,3vw,2.6rem);margin:.25rem 0 .6rem}
-    .lead{color:var(--muted);max-width:60ch}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-
-    /* shared button look (all yellow) */
-    .btn{
-      background:var(--gold); color:#000; font-weight:900; letter-spacing:.2px;
+    .home-grid{display:grid;gap:28px;align-items:center}
+    @media (min-width:960px){ .home-grid{grid-template-columns:1fr .95fr} }
+    .home-eyebrow{color:var(--home-gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
+    .home-title{font-size:clamp(2rem,3vw,2.6rem);margin:.25rem 0 .6rem}
+    .home-lead{color:var(--home-muted);max-width:60ch}
+    .home-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .home-btn{
+      background:var(--home-gold); color:#000; font-weight:900; letter-spacing:.2px;
       padding:12px 16px; border-radius:12px; border:2px solid transparent;
-      box-shadow:0 10px 22px var(--ring); transition:all .18s ease;
+      box-shadow:0 10px 22px var(--home-ring); transition:all .18s ease;
     }
-    .btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px var(--ring); border-color:var(--gold-700)}
-    .btn:active{transform:translateY(0)}
+    .home-btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px var(--home-ring); border-color:var(--home-gold-700)}
 
-    /* hero image card */
-    .cover-card{
+    .home-cover{
       background:linear-gradient(180deg,#0f0f0f, #121212);
-      border:1px solid #232323; border-radius:var(--radius); box-shadow:var(--shadow);
+      border:1px solid #232323; border-radius:var(--home-radius); box-shadow:var(--home-shadow);
       padding:16px;
     }
-    .cover-card img{border-radius:10px}
+    .home-cover img{max-width:100%;display:block;border-radius:10px}
 
-    /* ===== Feature blocks ===== */
-    .section{padding:28px 0}
-    .panel{
+    /* Feature strip */
+    .home-section{padding:28px 0}
+    .home-panels{display:grid;gap:20px}
+    @media (min-width:960px){ .home-panels{grid-template-columns:repeat(4,1fr)} }
+    .home-panel{
       background:linear-gradient(180deg,#121212, #0f0f0f);
-      border:1px solid #222; border-radius:var(--radius); box-shadow:var(--shadow);
-      padding:20px;
+      border:1px solid #222; border-radius:var(--home-radius); box-shadow:var(--home-shadow);
+      padding:20px; color:var(--home-text);
     }
-    .panel h3{margin:0 0 .35rem;font-size:1.05rem}
-    .muted{color:var(--muted)}
+    .home-panel h3{margin:0 0 .35rem;font-size:1.05rem}
+    .home-muted{color:var(--home-muted)}
 
-    /* ===== Footer ===== */
-    footer{border-top:1px solid #1e1e1e;margin-top:38px}
-    .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;color:#bdbdbd;flex-wrap:wrap}
-    .social{display:flex;gap:12px;flex-wrap:wrap}
-    .link{color:var(--gold)}
+    /* About section */
+    .home-two{display:grid;gap:20px}
+    @media (min-width:960px){ .home-two{grid-template-columns:1fr 1fr} }
+
+    /* Footer quick tweak */
+    .home-social a{color:#ffd400}
   </style>
 </head>
 <body>
 
-  <!-- =================== HEADER =================== -->
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="mark">✚</div>
-        <div class="name">Dads for <span style="color:var(--gold)">Christ</span></div>
+  <!-- ============ HEADER (scoped, won’t affect other pages) ============ -->
+  <header class="home-header">
+    <div class="home-container home-nav">
+      <div class="home-brand">
+        <div class="home-mark">✚</div>
+        <div class="home-name">Dads for <span style="color:#ffd400">Christ</span></div>
       </div>
-
-      <nav class="menu">
-        <a class="pill" href="podcast.html">Podcast</a>
-        <a class="pill" href="mission.html">Mission</a>
-        <a class="pill" href="isaidyes.html">I Said Yes</a>
-        <a class="pill" href="bible.html">Free Bible</a>
-        <a class="pill" href="#about">About</a>
-        <a class="pill" href="donate.html">Donate</a>
+      <nav class="home-menu">
+        <a class="home-pill" href="podcast.html">Podcast</a>
+        <a class="home-pill" href="mission.html">Mission</a>
+        <a class="home-pill" href="isaidyes.html">I Said Yes</a>
+        <a class="home-pill" href="bible.html">Free Bible</a>
+        <a class="home-pill" href="#about">About</a>
+        <a class="home-pill" href="donate.html">Donate</a>
       </nav>
     </div>
   </header>
 
-  <!-- =================== HERO =================== -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="stack-24">
-        <div class="eyebrow">Real dads • Real grace • Real change</div>
-        <h1 class="title">Calling fathers and families back to <span style="color:var(--gold)">Jesus</span></h1>
-        <p class="lead">
+  <!-- ============================== HERO ============================== -->
+  <section class="home-hero">
+    <div class="home-container home-grid">
+      <div>
+        <div class="home-eyebrow">Real dads • Real grace • Real change</div>
+        <h1 class="home-title">Calling fathers and families back to <span style="color:#ffd400">Jesus</span></h1>
+        <p class="home-lead">
           We’re two brothers—everyday dads saved by grace—helping men lead their homes with Christ at the center.
           Honest conversations. Practical steps. Hope in the gospel.
         </p>
-        <div class="cta">
-          <a class="btn" href="podcast.html">▶ Listen to the Podcast</a>
-          <a class="btn" href="mission.html">Our Mission</a>
+        <div class="home-cta">
+          <a class="home-btn" href="podcast.html">▶ Listen to the Podcast</a>
+          <a class="home-btn" href="mission.html">Our Mission</a>
         </div>
       </div>
 
-      <div class="cover-card">
-        <!-- Use your existing cover image -->
-        <img src="cover.png" alt="Dads for Christ Podcast Cover">
+      <div class="home-cover">
+        <!-- Fallback chain: cover.png -> Cover.png -> cover.jpg -> cover.jpeg -->
+        <img id="homeCover" src="cover.png" alt="Dads for Christ Podcast Cover">
       </div>
     </div>
   </section>
 
-  <!-- =================== FEATURE STRIP =================== -->
-  <section class="section">
-    <div class="container grid grid-4">
-      <article class="panel">
+  <!-- ========================== FEATURE STRIP ========================= -->
+  <section class="home-section">
+    <div class="home-container home-panels">
+      <article class="home-panel">
         <h3>🎧 Podcast</h3>
-        <p class="muted">Scripture, stories, and steps for the week.</p>
-        <a class="btn" href="podcast.html">Open Podcast</a>
+        <p class="home-muted">Scripture, stories, and steps for the week.</p>
+        <a class="home-btn" href="podcast.html">Open Podcast</a>
       </article>
 
-      <article class="panel">
+      <article class="home-panel">
         <h3>✝ I Said Yes</h3>
-        <p class="muted">Tell us you received Christ—we’ll follow up.</p>
-        <a class="btn" href="isaidyes.html">Share Your Decision</a>
+        <p class="home-muted">Tell us you received Christ—we’ll follow up.</p>
+        <a class="home-btn" href="isaidyes.html">Share Your Decision</a>
       </article>
 
-      <article class="panel">
+      <article class="home-panel">
         <h3>📖 Free Bible</h3>
-        <p class="muted">We’ll mail a KJV Bible to help you grow.</p>
-        <a class="btn" href="bible.html">Request a Bible</a>
+        <p class="home-muted">We’ll mail a KJV Bible to help you grow.</p>
+        <a class="home-btn" href="bible.html">Request a Bible</a>
       </article>
 
-      <article class="panel">
+      <article class="home-panel">
         <h3>❤️ Donate</h3>
-        <p class="muted">Help us send Bibles and equip dads.</p>
-        <a class="btn" href="donate.html">Support the Mission</a>
+        <p class="home-muted">Help us send Bibles and equip dads.</p>
+        <a class="home-btn" href="donate.html">Support the Mission</a>
       </article>
     </div>
   </section>
 
-  <!-- =================== ABOUT (for header link) =================== -->
-  <section id="about" class="section">
-    <div class="container grid grid-2">
-      <article class="panel">
+  <!-- ============================== ABOUT ============================ -->
+  <section id="about" class="home-section">
+    <div class="home-container home-two">
+      <article class="home-panel">
         <h3>About Us</h3>
-        <p class="muted">
+        <p class="home-muted">
           We’re two brothers and real dads—not professors or pastors—walking with Jesus and sharing what we’re learning.
           Our heartbeat is to see fathers lovingly lead, families worship together, and kids grow up under the Word.
         </p>
       </article>
 
-      <article class="panel">
+      <article class="home-panel">
         <h3>Stay Connected</h3>
-        <p class="muted">Find us on these platforms:</p>
-        <div class="cta">
-          <a class="btn" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
-          <a class="btn" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
+        <p class="home-muted">Find us on these platforms:</p>
+        <div class="home-cta">
+          <a class="home-btn" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
+          <a class="home-btn" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- =================== FOOTER =================== -->
-  <footer>
-    <div class="container foot">
+  <!-- ============================== FOOTER =========================== -->
+  <footer style="border-top:1px solid #1e1e1e;margin-top:38px">
+    <div class="home-container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap;color:#bdbdbd">
       <div>© <span id="year"></span> Dads for Christ • Real dads saved by grace</div>
-      <div class="social">
-        <a class="link" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
-        <a class="link" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
+      <div class="home-social" style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
       </div>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Image fallback chain for the cover
+    (function(){
+      const img = document.getElementById('homeCover');
+      const fallbacks = ['Cover.png','cover.jpg','cover.jpeg'];
+      let i = 0;
+      img.onerror = function(){
+        if(i < fallbacks.length){
+          img.src = fallbacks[i++];
+        } else {
+          img.onerror = null; // stop looping if nothing worked
+        }
+      };
+    })();
+  </script>
 </body>
 </html>
+
