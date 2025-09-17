@@ -5,219 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dads for Christ</title>
   <meta name="description" content="Dads for Christ — calling fathers and families back to Jesus." />
-  <!-- Keep your sitewide styles so other pages stay the same -->
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Home-page-only styles (scoped with .home- so other pages are unchanged) -->
   <style>
-    :root{
-      --home-bg:#0b0b0b;
-      --home-bg2:#121212;
-      --home-panel:#171717;
-      --home-text:#f2f2f2;
-      --home-muted:#cfcfcf;
-      --home-gold:#ffd400;
-      --home-gold-700:#b89b00;
-      --home-ring:rgba(255,212,0,.25);
-      --home-radius:14px;
-      --home-shadow:0 14px 40px rgba(0,0,0,.55);
-    }
-    /* container helper (won't clash with your style.css) */
-    .home-container{max-width:1120px;margin-inline:auto;padding:0 20px}
+    /* ====== RESET ====== */
+    body, h1, h2, h3, p, a { margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #0c0c0c; color: #f1f1f1; }
+    a { text-decoration: none; color: inherit; }
 
-    /* Header (scoped) */
-    .home-header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(0,0,0,.65); backdrop-filter: blur(10px);
-      border-bottom:1px solid #1e1e1e;
-    }
-    .home-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .home-brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;color:var(--home-text)}
-    .home-mark{
-      width:28px;height:28px;display:grid;place-items:center;
-      border-radius:10px;background:var(--home-gold); color:#000; font-weight:900;
-      box-shadow:0 6px 14px var(--home-ring);
-    }
-    .home-name{font-size:1.15rem}
-    .home-menu{display:flex;gap:10px;flex-wrap:wrap}
-    .home-pill{
-      background:var(--home-gold); color:#000; font-weight:800;
-      padding:10px 14px;border-radius:999px; display:inline-flex;align-items:center;gap:8px;
-      border:2px solid transparent; box-shadow:0 8px 18px var(--home-ring);
-      transform:translateY(0); transition:all .18s ease; white-space:nowrap;
-    }
-    .home-pill:hover{transform:translateY(-1px); box-shadow:0 12px 24px var(--home-ring); border-color:var(--home-gold-700)}
+    /* ====== NAV ====== */
+    header { background: #111; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-size: 1.4rem; font-weight: bold; color: #FFD700; }
+    .menu a { margin: 0 0.8rem; color: #fff; transition: color 0.2s; }
+    .menu a:hover { color: #FFD700; }
+    .btn-nav { background: #FFD700; padding: 0.4rem 1rem; border-radius: 4px; color: #000; font-weight: bold; }
 
-    /* Hero (scoped) */
-    .home-hero{
-      color:var(--home-text);
-      background:linear-gradient(180deg,var(--home-bg) 0%,var(--home-bg2) 100%),
-                 radial-gradient(1200px 400px at 20% -10%, rgba(255,212,0,.07), transparent 60%),
-                 radial-gradient(1200px 500px at 110% -10%, rgba(255,212,0,.06), transparent 60%);
-      padding:48px 0 24px; border-bottom:1px solid #1c1c1c;
-    }
-    .home-grid{display:grid;gap:28px;align-items:center}
-    @media (min-width:960px){ .home-grid{grid-template-columns:1fr .95fr} }
-    .home-eyebrow{color:var(--home-gold);font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:.8rem}
-    .home-title{font-size:clamp(2rem,3vw,2.6rem);margin:.25rem 0 .6rem}
-    .home-lead{color:var(--home-muted);max-width:60ch}
-    .home-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .home-btn{
-      background:var(--home-gold); color:#000; font-weight:900; letter-spacing:.2px;
-      padding:12px 16px; border-radius:12px; border:2px solid transparent;
-      box-shadow:0 10px 22px var(--home-ring); transition:all .18s ease;
-    }
-    .home-btn:hover{transform:translateY(-1px); box-shadow:0 14px 28px var(--home-ring); border-color:var(--home-gold-700)}
+    /* ====== HERO ====== */
+    .hero { text-align: center; padding: 3rem 1rem; background: linear-gradient(to bottom, #000, #111); }
+    .hero img { max-width: 280px; border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.6); margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 2.2rem; color: #fff; margin-bottom: 1rem; }
+    .hero h1 span { color: #FFD700; }
+    .hero p { max-width: 700px; margin: 0 auto 1.5rem; }
+    .hero .cta a { display: inline-block; margin: 0.5rem; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: bold; }
+    .btn-gold { background: #FFD700; color: #000; }
+    .btn-dark { background: #222; color: #FFD700; border: 1px solid #FFD700; }
 
-    .home-cover{
-      background:linear-gradient(180deg,#0f0f0f, #121212);
-      border:1px solid #232323; border-radius:var(--home-radius); box-shadow:var(--home-shadow);
-      padding:16px;
-    }
-    .home-cover img{max-width:100%;display:block;border-radius:10px}
+    /* ====== SECTIONS ====== */
+    .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
+    section { margin-bottom: 2rem; background: #1a1a1a; padding: 2rem; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); }
+    section h2 { color: #FFD700; margin-bottom: 1rem; }
+    section p { margin-bottom: 1rem; }
 
-    /* Feature strip */
-    .home-section{padding:28px 0}
-    .home-panels{display:grid;gap:20px}
-    @media (min-width:960px){ .home-panels{grid-template-columns:repeat(4,1fr)} }
-    .home-panel{
-      background:linear-gradient(180deg,#121212, #0f0f0f);
-      border:1px solid #222; border-radius:var(--home-radius); box-shadow:var(--home-shadow);
-      padding:20px; color:var(--home-text);
-    }
-    .home-panel h3{margin:0 0 .35rem;font-size:1.05rem}
-    .home-muted{color:var(--home-muted)}
-
-    /* About section */
-    .home-two{display:grid;gap:20px}
-    @media (min-width:960px){ .home-two{grid-template-columns:1fr 1fr} }
-
-    /* Footer quick tweak */
-    .home-social a{color:#ffd400}
+    /* ====== FOOTER ====== */
+    footer { background: #111; color: #ccc; text-align: center; padding: 1rem; font-size: 0.9rem; }
+    footer a { margin: 0 0.5rem; color: #FFD700; }
   </style>
 </head>
 <body>
-
-  <!-- ============ HEADER (scoped, won’t affect other pages) ============ -->
-  <header class="home-header">
-    <div class="home-container home-nav">
-      <div class="home-brand">
-        <div class="home-mark">✚</div>
-        <div class="home-name">Dads for <span style="color:#ffd400">Christ</span></div>
-      </div>
-      <nav class="home-menu">
-        <a class="home-pill" href="podcast.html">Podcast</a>
-        <a class="home-pill" href="mission.html">Mission</a>
-        <a class="home-pill" href="isaidyes.html">I Said Yes</a>
-        <a class="home-pill" href="bible.html">Free Bible</a>
-        <a class="home-pill" href="#about">About</a>
-        <a class="home-pill" href="donate.html">Donate</a>
+  <!-- NAV -->
+  <header>
+    <div class="nav">
+      <div class="brand">✚ Dads for <span style="color:white;">Christ</span></div>
+      <nav class="menu">
+        <a href="podcast.html">Podcast</a>
+        <a href="mission.html">Mission</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="bible.html">Free Bible</a>
+        <!-- Updated to point to donate.html -->
+        <a href="/donate.html" class="btn-nav">Donate</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============================== HERO ============================== -->
-  <section class="home-hero">
-    <div class="home-container home-grid">
-      <div>
-        <div class="home-eyebrow">Real dads • Real grace • Real change</div>
-        <h1 class="home-title">Calling fathers and families back to <span style="color:#ffd400">Jesus</span></h1>
-        <p class="home-lead">
-          We’re two brothers—everyday dads saved by grace—helping men lead their homes with Christ at the center.
-          Honest conversations. Practical steps. Hope in the gospel.
-        </p>
-        <div class="home-cta">
-          <a class="home-btn" href="podcast.html">▶ Listen to the Podcast</a>
-          <a class="home-btn" href="mission.html">Our Mission</a>
-        </div>
-      </div>
-
-      <div class="home-cover">
-        <!-- Fallback chain: cover.png -> Cover.png -> cover.jpg -> cover.jpeg -->
-        <img id="homeCover" src="cover.png" alt="Dads for Christ Podcast Cover">
-      </div>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="cover.png" alt="Dads for Christ Podcast Cover" />
+    <h1>Calling fathers and families back to <span>Jesus</span></h1>
+    <p>We’re two brothers—real dads saved by grace—helping men lead their homes with Christ at the center. 
+       Join us as we share honest conversations, practical steps, and the hope of the gospel.</p>
+    <div class="cta">
+      <a class="btn btn--gold" href="podcast.html">▶ Listen to the Podcast</a>
+      <a class="btn-dark" href="#mission">Our Mission</a>
     </div>
   </section>
 
-  <!-- ========================== FEATURE STRIP ========================= -->
-  <section class="home-section">
-    <div class="home-container home-panels">
-      <article class="home-panel">
-        <h3>🎧 Podcast</h3>
-        <p class="home-muted">Scripture, stories, and steps for the week.</p>
-        <a class="home-btn" href="podcast.html">Open Podcast</a>
-      </article>
+  <!-- CONTENT SECTIONS -->
+  <main class="container">
+    <section id="mission">
+      <h2>Mission</h2>
+      <p><strong>Dads for Christ</strong> exists to call fathers and families back to Jesus, bringing hope and faith into homes, restoring strength to struggling dads, and reviving the American family through the love of our Savior.</p>
+    </section>
 
-      <article class="home-panel">
-        <h3>✝ I Said Yes</h3>
-        <p class="home-muted">Tell us you received Christ—we’ll follow up.</p>
-        <a class="home-btn" href="isaidyes.html">Share Your Decision</a>
-      </article>
+    <section id="isaidyes">
+      <h2>I Said Yes to Jesus</h2>
+      <p>If you prayed to receive Christ, we want to celebrate and walk with you in next steps.</p>
+      <a class="btn btn--gold" href="isaidyes.html">Tell Us You Said Yes</a>
+    </section>
 
-      <article class="home-panel">
-        <h3>📖 Free Bible</h3>
-        <p class="home-muted">We’ll mail a KJV Bible to help you grow.</p>
-        <a class="home-btn" href="bible.html">Request a Bible</a>
-      </article>
+    <section id="bible">
+      <h2>Request a Free Bible</h2>
+      <p>No app replaces God’s Word in your hands. We’ll mail you a free KJV Bible to help you grow.</p>
+      <a class="btn btn--ghost" href="bible.html">Request a Bible</a>
+    </section>
 
-      <article class="home-panel">
-        <h3>❤️ Donate</h3>
-        <p class="home-muted">Help us send Bibles and equip dads.</p>
-        <a class="home-btn" href="donate.html">Support the Mission</a>
-      </article>
-    </div>
-  </section>
+    <section id="podcast">
+      <h2>Podcast</h2>
+      <p>Honest conversations, Scripture, and practical steps for the week.</p>
+      <a class="btn-gold" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank">Spotify</a>
+      <a class="btn-dark" href="https://www.youtube.com/@dadsforchrist42" target="_blank">YouTube</a>
+    </section>
 
-  <!-- ============================== ABOUT ============================ -->
-  <section id="about" class="home-section">
-    <div class="home-container home-two">
-      <article class="home-panel">
-        <h3>About Us</h3>
-        <p class="home-muted">
-          We’re two brothers and real dads—not professors or pastors—walking with Jesus and sharing what we’re learning.
-          Our heartbeat is to see fathers lovingly lead, families worship together, and kids grow up under the Word.
-        </p>
-      </article>
+    <section id="give">
+      <h2>Support the Movement</h2>
+      <p>Your gift helps send Bibles, equip dads, and share the gospel.</p>
+      <!-- Updated buttons to link to donate.html -->
+      <a class="btn-gold" href="donate.html">Give Monthly</a>
+      <a class="btn-dark" href="donate.html">One-Time Gift</a>
+    </section>
 
-      <article class="home-panel">
-        <h3>Stay Connected</h3>
-        <p class="home-muted">Find us on these platforms:</p>
-        <div class="home-cta">
-          <a class="home-btn" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
-          <a class="home-btn" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
-        </div>
-      </article>
-    </div>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email us your prayer requests, testimonies, or questions. We’d love to hear from you.</p>
+      <p><a class="btn-dark" href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a></p>
+    </section>
+  </main>
 
-  <!-- ============================== FOOTER =========================== -->
-  <footer style="border-top:1px solid #1e1e1e;margin-top:38px">
-    <div class="home-container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;flex-wrap:wrap;color:#bdbdbd">
-      <div>© <span id="year"></span> Dads for Christ • Real dads saved by grace</div>
-      <div class="home-social" style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
-      </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>© <span id="year"></span> Dads for Christ • Real dads saved by grace</p>
+    <div>
+      <a href="https://www.youtube.com/@dadsforchrist42" target="_blank">YouTube</a> | 
+      <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank">Spotify</a>
     </div>
   </footer>
 
   <script>
-    // Year stamp
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Image fallback chain for the cover
-    (function(){
-      const img = document.getElementById('homeCover');
-      const fallbacks = ['Cover.png','cover.jpg','cover.jpeg'];
-      let i = 0;
-      img.onerror = function(){
-        if(i < fallbacks.length){
-          img.src = fallbacks[i++];
-        } else {
-          img.onerror = null; // stop looping if nothing worked
-        }
-      };
-    })();
   </script>
 </body>
 </html>
