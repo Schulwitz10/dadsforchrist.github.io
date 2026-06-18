@@ -53,18 +53,33 @@
     }
 
     .hero {
+      min-height: 450px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       padding: 90px 20px;
-      background:
-        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
-        url('Blog.png');
+      background-image:
+        linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+        url("./Blog.png");
       background-size: cover;
-      background-position: center;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      background: rgba(0,0,0,.55);
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid rgba(202,169,74,.35);
     }
 
     .hero h1 {
       font-size: 3.5rem;
-      margin-bottom: 15px;
+      margin: 0 0 15px;
+      line-height: 1.1;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.8);
     }
 
     .gold {
@@ -75,6 +90,7 @@
       max-width: 800px;
       margin: auto;
       font-size: 1.2rem;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.8);
     }
 
     .container {
@@ -89,6 +105,7 @@
       border-radius: 12px;
       border: 1px solid #2c2c2c;
       margin-bottom: 40px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.45);
     }
 
     .intro h2 {
@@ -132,11 +149,13 @@
       font-weight: bold;
       border: 2px solid #caa94a;
       color: #ffffff;
+      transition: .2s ease;
     }
 
     .btn:hover {
       background: #caa94a;
       color: #000000;
+      transform: translateY(-2px);
     }
 
     .featured-post {
@@ -145,6 +164,7 @@
       padding: 40px;
       border-radius: 12px;
       border: 1px solid #2c2c2c;
+      box-shadow: 0 8px 25px rgba(0,0,0,.45);
     }
 
     .featured-post h2 {
@@ -159,6 +179,36 @@
       color: #dddddd;
       font-style: italic;
       margin: 25px 0;
+    }
+
+    .store-cta {
+      margin-top: 50px;
+      background: #111111;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #caa94a;
+      text-align: center;
+    }
+
+    .store-cta h2 {
+      color: #caa94a;
+      margin-top: 0;
+    }
+
+    .gold-btn {
+      display: inline-block;
+      background: #caa94a;
+      color: #000000;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 15px;
+      transition: .2s ease;
+    }
+
+    .gold-btn:hover {
+      background: #e0bc57;
+      transform: translateY(-2px);
     }
 
     footer {
@@ -181,10 +231,24 @@
 
       .menu a {
         margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 350px;
+        padding: 60px 20px;
       }
 
       .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero-content {
+        padding: 25px;
       }
     }
   </style>
@@ -206,20 +270,22 @@
 </header>
 
 <section class="hero">
-  <h1>The Dads for Christ <span class="gold">Blog</span></h1>
-  <p>
-    Encouragement for fathers, families, faith, leadership, and living boldly for Jesus Christ.
-  </p>
+  <div class="hero-content">
+    <h1>The Dads for Christ <span class="gold">Blog</span></h1>
+    <p>
+      Encouragement for fathers, families, faith, leadership,
+      and living boldly for Jesus Christ.
+    </p>
+  </div>
 </section>
 
 <main class="container">
 
   <section class="intro">
     <h2>Faith. Fatherhood. Family.</h2>
-
     <p>
       This blog exists to encourage men to lead their homes with Christ at the center.
-      Here you will find short messages, Biblical encouragement, practical reminders,
+      Here you will find Biblical encouragement, practical reminders,
       and honest reflections about being a husband, father, and follower of Jesus.
     </p>
   </section>
@@ -298,12 +364,17 @@
     </p>
 
     <p>
-      So ask yourself today:
-    </p>
-
-    <p>
       <strong>Who is my one?</strong>
     </p>
+  </section>
+
+  <section class="store-cta">
+    <h2>Wear the Mission</h2>
+    <p>
+      The Reach One Bracelet is a daily reminder to pray for one person,
+      encourage one person, and point one person to Jesus.
+    </p>
+    <a href="store.html" class="gold-btn">Shop Reach One Bracelet</a>
   </section>
 
 </main>
