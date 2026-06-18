@@ -1,126 +1,263 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Dads for Christ</title>
-  <meta name="description" content="Dads for Christ — calling fathers and families back to Jesus." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Dads for Christ exists to encourage fathers to lead their homes with Jesus Christ at the center." />
+
   <style>
-    /* ====== RESET ====== */
-    body, h1, h2, h3, p, a { margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; background: #0c0c0c; color: #f1f1f1; }
-    a { text-decoration: none; color: inherit; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-    /* ====== NAV ====== */
-    header { background: #111; padding: 1rem 2rem; position: sticky; top: 0; z-index: 100; }
-    .nav { display: flex; justify-content: space-between; align-items: center; }
-    .brand { font-size: 1.4rem; font-weight: bold; color: #FFD700; }
-    .menu a { margin: 0 0.8rem; color: #fff; transition: color 0.2s; }
-    .menu a:hover { color: #FFD700; }
-    .btn-nav { background: #FFD700; padding: 0.4rem 1rem; border-radius: 4px; color: #000; font-weight: bold; }
+    a {
+      text-decoration: none;
+    }
 
-    /* ====== HERO ====== */
-    .hero { text-align: center; padding: 3rem 1rem; background: linear-gradient(to bottom, #000, #111); }
-    .hero img { max-width: 280px; border-radius: 12px; box-shadow: 0 12px 28px rgba(0,0,0,0.6); margin-bottom: 1.5rem; }
-    .hero h1 { font-size: 2.2rem; color: #fff; margin-bottom: 1rem; }
-    .hero h1 span { color: #FFD700; }
-    .hero p { max-width: 700px; margin: 0 auto 1.5rem; }
-    .hero .cta a { display: inline-block; margin: 0.5rem; padding: 0.7rem 1.5rem; border-radius: 6px; font-weight: bold; }
-    .btn-gold { background: #FFD700; color: #000; }
-    .btn-dark { background: #222; color: #FFD700; border: 1px solid #FFD700; }
+    header {
+      background: #111111;
+      padding: 20px 40px;
+      border-bottom: 2px solid #caa94a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-    /* ====== SECTIONS ====== */
-    .container { max-width: 1000px; margin: auto; padding: 2rem 1rem; }
-    section { margin-bottom: 2rem; background: #1a1a1a; padding: 2rem; border-radius: 8px; box-shadow: 0 6px 16px rgba(0,0,0,0.5); }
-    section h2 { color: #FFD700; margin-bottom: 1rem; }
-    section p { margin-bottom: 1rem; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    /* ====== FOOTER ====== */
-    footer { background: #111; color: #ccc; text-align: center; padding: 1rem; font-size: 0.9rem; }
-    footer a { margin: 0 0.5rem; color: #FFD700; }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #caa94a;
+    }
+
+    .menu a {
+      color: #ffffff;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: #caa94a;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url('hero.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .gold {
+      color: #caa94a;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 8px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-gold {
+      background: #caa94a;
+      color: #000000;
+    }
+
+    .btn-outline {
+      border: 2px solid #caa94a;
+      color: #ffffff;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .section h2 {
+      color: #caa94a;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 35px;
+      border-radius: 10px;
+      border: 1px solid #2c2c2c;
+      box-shadow: 0 8px 25px rgba(0,0,0,.45);
+    }
+
+    .card h3 {
+      color: #ffffff;
+      font-size: 1.6rem;
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111111;
+      border-top: 1px solid #333333;
+      color: #cccccc;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 18px 20px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <!-- NAV -->
+
   <header>
-    <div class="nav">
-      <div class="brand">✚ Dads for <span style="color:white;">Christ</span></div>
-      <nav class="menu">
-        <a href="podcast.html">Podcast</a>
-        <a href="#mission">Mission</a>
-        <a href="isaidyes.html">I Said Yes</a>
-        <a href="bible.html">Free Bible</a>
-        <!-- Updated to point to donate.html -->
-        <a href="/donate.html" class="btn-nav">Donate</a>
-      </nav>
-    </div>
+    <nav>
+      <div class="logo">✚ Dads for Christ</div>
+
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
-    <img src="cover.png" alt="Dads for Christ Podcast Cover" />
-    <h1>Calling fathers and families back to <span>Jesus</span></h1>
-    <p>We’re two brothers—real dads saved by grace—helping men lead their homes with Christ at the center. 
-       Join us as we share honest conversations, practical steps, and the hope of the gospel.</p>
-    <div class="cta">
-      <a class="btn btn--gold" href="podcast.html">▶ Listen to the Podcast</a>
-      <a class="btn-dark" href="#mission">Our Mission</a>
+    <div class="hero-content">
+      <h1>Raising Strong Families Through <span class="gold">Jesus Christ</span></h1>
+
+      <p>
+        Dads for Christ exists to encourage fathers to lead their homes,
+        love their families, strengthen their faith, and boldly share
+        the Gospel in a world that desperately needs Christ.
+      </p>
+
+      <a href="store.html" class="btn btn-gold">Shop Reach One Bracelets</a>
+      <a href="contact.html" class="btn btn-outline">Contact Us</a>
     </div>
   </section>
 
-  <!-- CONTENT SECTIONS -->
-  <main class="container">
-    <section id="mission">
-      <h2>Mission</h2>
-      <p><strong>Dads for Christ</strong> exists to call fathers and families back to Jesus, bringing hope and faith into homes, restoring strength to struggling dads, and reviving the American family through the love of our Savior.</p>
-    </section>
+  <section class="section">
+    <h2>Our Mission</h2>
 
-    <section id="isaidyes">
-      <h2>I Said Yes to Jesus</h2>
-      <p>If you prayed to receive Christ, we want to celebrate and walk with you in next steps.</p>
-      <a class="btn btn--gold" href="isaidyes.html">Tell Us You Said Yes</a>
-    </section>
-
-    <section id="bible">
-      <h2>Request a Free Bible</h2>
-      <p>No app replaces God’s Word in your hands. We’ll mail you a free KJV Bible to help you grow.</p>
-      <a class="btn btn--ghost" href="bible.html">Request a Bible</a>
-    </section>
-
-    <section id="podcast">
-      <h2>Podcast</h2>
-      <p>Honest conversations, Scripture, and practical steps for the week.</p>
-      <a class="btn-gold" href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank">Spotify</a>
-      <a class="btn-dark" href="https://www.youtube.com/@dadsforchrist42" target="_blank">YouTube</a>
-    </section>
-
-    <section id="give">
-      <h2>Support the Movement</h2>
-      <p>Your gift helps send Bibles, equip dads, and share the gospel.</p>
-      <!-- Updated buttons to link to donate.html -->
-      <a class="btn-gold" href="donate.html">Give Monthly</a>
-      <a class="btn-dark" href="donate.html">One-Time Gift</a>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email us your prayer requests, testimonies, or questions. We’d love to hear from you.</p>
-      <p><a class="btn-dark" href="mailto:dadsforchrist@gmail.com">info@dadsforchrist.org</a></p>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© <span id="year"></span> Dads for Christ • Real dads saved by grace</p>
-    <div>
-      <a href="https://www.youtube.com/@dadsforchrist42" target="_blank">YouTube</a> | 
-      <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank">Spotify</a>
+    <div class="card">
+      <p>
+        We believe fathers have one of the most important callings on earth.
+        Strong fathers build strong families, and strong families build strong communities.
+        Our mission is to help dads put Jesus at the center of their homes and inspire
+        other men to do the same.
+      </p>
     </div>
+  </section>
+
+  <section class="section">
+    <h2>Reach One</h2>
+
+    <div class="card">
+      <h3>Inspired by Luke 15:4-7</h3>
+
+      <p>
+        The Reach One bracelet serves as a daily reminder that every soul matters.
+        Jesus left the ninety-nine to seek the one lost sheep.
+      </p>
+
+      <p>
+        Wear the bracelet. Start conversations. Share the Gospel.
+        Reach One.
+      </p>
+
+      <a href="store.html" class="btn btn-gold">Shop Bracelets</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>From The Blog</h2>
+
+    <div class="card">
+      <p>
+        Read short messages about Biblical fatherhood, marriage, leadership,
+        faith, family, and practical ways to follow Christ in everyday life.
+      </p>
+
+      <a href="blog.html" class="btn btn-outline">Read Blog</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Get Involved</h2>
+
+    <div class="card">
+      <p>
+        Have a prayer request, testimony, question, or want to connect with
+        Dads for Christ? We would love to hear from you.
+      </p>
+
+      <a href="contact.html" class="btn btn-gold">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Dads for Christ</p>
+    <p>Helping fathers lead their homes back to Jesus.</p>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
+```
+
