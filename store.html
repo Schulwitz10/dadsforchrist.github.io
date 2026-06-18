@@ -1,1 +1,257 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reach One Store | Dads for Christ</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: white;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+
+    header {
+      background: #111;
+      padding: 20px 40px;
+      border-bottom: 2px solid #caa94a;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #caa94a;
+    }
+
+    .menu a {
+      color: white;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: #caa94a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75));
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    .gold {
+      color: #caa94a;
+    }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+
+    .store {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .product-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0,0,0,.6);
+    }
+
+    .product-card {
+      background: #151515;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #2c2c2c;
+    }
+
+    .product-card h2 {
+      color: #caa94a;
+      font-size: 2.4rem;
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #caa94a;
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .note {
+      font-size: .95rem;
+      color: #ccc;
+      margin-top: 15px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 25px 70px;
+    }
+
+    .section h2 {
+      color: #caa94a;
+      font-size: 2rem;
+    }
+
+    .box {
+      background: #151515;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #2c2c2c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111;
+      border-top: 1px solid #333;
+      color: #ccc;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu a {
+        margin: 0 8px;
+      }
+
+      .store {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">✚ Dads for Christ</div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Reach One <span class="gold">Bracelets</span></h1>
+  <p>
+    A simple daily reminder to live with purpose, share the Gospel,
+    and remember that every soul matters.
+  </p>
+</section>
+
+<section class="store">
+
+  <div>
+    <img src="bracelet.jpg" alt="Reach One Bracelet" class="product-img">
+  </div>
+
+  <div class="product-card">
+    <h2>Reach One Bracelet</h2>
+
+    <p>
+      Inspired by Luke 15:4-7, the Reach One bracelet is a reminder
+      that Jesus left the ninety-nine to go after the one.
+    </p>
+
+    <p class="price">$12.99</p>
+
+    <ul>
+      <li>Black woven bracelet</li>
+      <li>“REACH ONE” design</li>
+      <li>Luke 15:4-7 printed inside</li>
+      <li>One size fits most</li>
+      <li>Ships from Michigan</li>
+    </ul>
+
+    <a href="YOUR-STRIPE-LINK-HERE" class="btn" target="_blank">
+      Buy Now
+    </a>
+
+    <p class="note">
+      Replace “YOUR-STRIPE-LINK-HERE” with your Stripe or PayPal checkout link.
+    </p>
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="box">
+    <h2>Why Reach One?</h2>
+
+    <p>
+      Luke 15 tells us about the shepherd who left the ninety-nine
+      to search for the one lost sheep. Reach One is more than a bracelet.
+      It is a reminder to pray for one person, encourage one person,
+      and share the hope of Jesus with one person.
+    </p>
+
+    <p>
+      Wear it as a reminder. Give one to someone else.
+      Start a conversation. Reach One.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Dads for Christ</p>
+  <p>Michigan Nonprofit Organization</p>
+</footer>
+
+</body>
+</html>
+```
 
