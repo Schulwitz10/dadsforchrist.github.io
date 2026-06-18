@@ -1,0 +1,318 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog | Dads for Christ</title>
+  <meta name="description" content="Dads for Christ blog — faith, fatherhood, family, leadership, and the Gospel." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      background: #111111;
+      padding: 20px 40px;
+      border-bottom: 2px solid #caa94a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #caa94a;
+    }
+
+    .menu a {
+      color: #ffffff;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: #caa94a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url('Banner.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    .gold {
+      color: #caa94a;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .intro {
+      background: #151515;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #2c2c2c;
+      margin-bottom: 40px;
+    }
+
+    .intro h2 {
+      color: #caa94a;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .post-card {
+      background: #151515;
+      border: 1px solid #2c2c2c;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.45);
+    }
+
+    .post-card h3 {
+      color: #caa94a;
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .date {
+      color: #999999;
+      font-size: .9rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 22px;
+      border-radius: 5px;
+      font-weight: bold;
+      border: 2px solid #caa94a;
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      background: #caa94a;
+      color: #000000;
+    }
+
+    .featured-post {
+      margin-top: 60px;
+      background: #151515;
+      padding: 40px;
+      border-radius: 12px;
+      border: 1px solid #2c2c2c;
+    }
+
+    .featured-post h2 {
+      color: #caa94a;
+      font-size: 2.3rem;
+      margin-top: 0;
+    }
+
+    .scripture {
+      border-left: 4px solid #caa94a;
+      padding-left: 20px;
+      color: #dddddd;
+      font-style: italic;
+      margin: 25px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111111;
+      border-top: 1px solid #333333;
+      color: #cccccc;
+    }
+
+    @media (max-width: 900px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu a {
+        margin: 0 8px;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">✚ Dads for Christ</div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>The Dads for Christ <span class="gold">Blog</span></h1>
+  <p>
+    Encouragement for fathers, families, faith, leadership, and living boldly for Jesus Christ.
+  </p>
+</section>
+
+<main class="container">
+
+  <section class="intro">
+    <h2>Faith. Fatherhood. Family.</h2>
+
+    <p>
+      This blog exists to encourage men to lead their homes with Christ at the center.
+      Here you will find short messages, Biblical encouragement, practical reminders,
+      and honest reflections about being a husband, father, and follower of Jesus.
+    </p>
+  </section>
+
+  <section class="blog-grid">
+
+    <article class="post-card">
+      <h3>What It Means to Reach One</h3>
+      <p class="date">June 2026</p>
+      <p>
+        Jesus left the ninety-nine to go after the one. That same mission still matters today.
+        Who is the one person God may be calling you to pray for, encourage, and point back to Him?
+      </p>
+      <a href="#reach-one" class="btn">Read More</a>
+    </article>
+
+    <article class="post-card">
+      <h3>Leading Your Home Starts With You</h3>
+      <p class="date">Coming Soon</p>
+      <p>
+        A strong home does not happen by accident. Fathers are called to lead with love,
+        humility, discipline, prayer, and faithfulness.
+      </p>
+      <a href="#" class="btn">Coming Soon</a>
+    </article>
+
+    <article class="post-card">
+      <h3>Faith in the Everyday Moments</h3>
+      <p class="date">Coming Soon</p>
+      <p>
+        Following Jesus is not only about Sunday morning. It is about the way we speak,
+        work, forgive, serve, and love our families every day.
+      </p>
+      <a href="#" class="btn">Coming Soon</a>
+    </article>
+
+  </section>
+
+  <section class="featured-post" id="reach-one">
+    <h2>What It Means to Reach One</h2>
+
+    <p>
+      In Luke 15, Jesus tells the story of a shepherd who had one hundred sheep.
+      When one was lost, the shepherd left the ninety-nine and went after the one
+      until he found it.
+    </p>
+
+    <div class="scripture">
+      “What man of you, having an hundred sheep, if he lose one of them,
+      doth not leave the ninety and nine in the wilderness, and go after that which is lost,
+      until he find it?” — Luke 15:4
+    </div>
+
+    <p>
+      That is the heart behind Reach One.
+    </p>
+
+    <p>
+      Every soul matters to God. Every person has value. Every father, husband,
+      son, brother, neighbor, and friend is someone Jesus died for.
+    </p>
+
+    <p>
+      The Reach One bracelet is not just something to wear. It is a reminder.
+      A reminder to pray for one person. Encourage one person. Invite one person.
+      Share the Gospel with one person.
+    </p>
+
+    <p>
+      You do not have to reach the whole world in one day. Start with one.
+    </p>
+
+    <p>
+      One conversation can plant a seed. One prayer can change a life.
+      One invitation can open a door. One act of love can point someone back to Christ.
+    </p>
+
+    <p>
+      So ask yourself today:
+    </p>
+
+    <p>
+      <strong>Who is my one?</strong>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Dads for Christ</p>
+  <p>Michigan Nonprofit Organization</p>
+</footer>
+
+</body>
+</html>
+```
