@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | Dads for Christ</title>
+  <meta name="description" content="Contact Dads for Christ for prayer requests, testimonies, questions, or ministry support." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; }
+
+    header {
+      background: #111111;
+      padding: 20px 40px;
+      border-bottom: 2px solid #caa94a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #caa94a;
+    }
+
+    .menu a {
+      color: #ffffff;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .menu a:hover {
+      color: #caa94a;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+      background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url("Banner.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    .gold { color: #caa94a; }
+
+    .hero p {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #2c2c2c;
+      box-shadow: 0 8px 25px rgba(0,0,0,.45);
+    }
+
+    .card h2 {
+      color: #caa94a;
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    .contact-link {
+      display: inline-block;
+      color: #caa94a;
+      font-weight: bold;
+      margin-top: 10px;
+      word-break: break-word;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 6px;
+      border: 1px solid #333333;
+      background: #0b0b0b;
+      color: #ffffff;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      background: #caa94a;
+      color: #000000;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    button:hover {
+      background: #e0bc57;
+      transform: translateY(-2px);
+    }
+
+    .note {
+      color: #cccccc;
+      font-size: .95rem;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111111;
+      border-top: 1px solid #333333;
+      color: #cccccc;
+    }
+
+    @media (max-width: 850px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">✚ Dads for Christ</div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Contact <span class="gold">Dads for Christ</span></h1>
+  <p>
+    Have a prayer request, testimony, question, or want to support the ministry?
+    We would love to hear from you.
+  </p>
+</section>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Reach Out</h2>
+
+    <p>
+      Dads for Christ is a Michigan nonprofit organization dedicated to strengthening
+      fathers, supporting families, and sharing the Gospel of Jesus Christ.
+    </p>
+
+    <p>
+      You can contact us for prayer requests, testimonies, ministry questions,
+      bracelet orders, partnerships, or general support.
+    </p>
+
+    <a class="contact-link" href="mailto:dadsforchrist@gmail.com">
+      dadsforchrist@gmail.com
+    </a>
+
+    <p class="note">
+      Replace this email if you want to use a different ministry email address.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Send a Message</h2>
+
+    <form action="https://formspree.io/f/YOUR-FORMSPREE-ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <select name="reason" required>
+        <option value="">What is this about?</option>
+        <option value="Prayer Request">Prayer Request</option>
+        <option value="Testimony">Testimony</option>
+        <option value="Bracelet Order Question">Bracelet Order Question</option>
+        <option value="Ministry Question">Ministry Question</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <textarea name="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <p class="note">
+      To make this form work, create a free Formspree form and replace
+      YOUR-FORMSPREE-ID with your real form ID.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Dads for Christ</p>
+  <p>Michigan Nonprofit Organization</p>
+</footer>
+
+</body>
+</html>
+```
