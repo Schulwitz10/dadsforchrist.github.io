@@ -477,7 +477,15 @@ code {
 
 .product-card.featured .product-media {
   aspect-ratio: auto;
-  min-height: 280px;
+  min-height: 0;
+  height: auto;
+  align-self: center;
+}
+
+.product-card.featured .product-media picture,
+.product-card.featured .product-media img {
+  height: auto;
+  object-fit: contain;
 }
 
 .amount-row {

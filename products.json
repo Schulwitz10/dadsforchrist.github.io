@@ -21,7 +21,7 @@
       ],
       "checkoutUrl": "https://buy.stripe.com/cNi3cu24Qe9zfGD1gx7Vm01",
       "checkoutLabel": "Buy now — $10.00",
-      "note": "Every purchase helps support the mission of Dads for Christ as we strengthen families and share the Gospel. Checkout opens on Stripe."
+      "note": "Every purchase helps support the mission of Dads for Christ as we strengthen families and share the Gospel. Checkout opens on Stripe, where shipping is added."
     },
     {
       "id": "reach-one-shirt",
@@ -35,8 +35,7 @@
       "summary": "Room for a future Reach One shirt. This listing is not for sale until a hosted checkout link is added.",
       "details": [
         "Not for sale yet",
-        "Replace this summary, price, and image when the shirt is ready",
-        "Paste a checkout URL into checkoutUrl and set status to available"
+        "Checkout link has not been added"
       ],
       "checkoutUrl": "",
       "checkoutLabel": "Checkout not connected",
@@ -54,8 +53,7 @@
       "summary": "Room for a future Reach One hat. This listing is not for sale until a hosted checkout link is added.",
       "details": [
         "Not for sale yet",
-        "Replace this summary, price, and image when the hat is ready",
-        "Paste a checkout URL into checkoutUrl and set status to available"
+        "Checkout link has not been added"
       ],
       "checkoutUrl": "",
       "checkoutLabel": "Checkout not connected",

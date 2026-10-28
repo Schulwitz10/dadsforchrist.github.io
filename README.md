@@ -57,6 +57,8 @@ The Reach One bracelet already has a live Stripe Payment Link:
 
 `https://buy.stripe.com/cNi3cu24Qe9zfGD1gx7Vm01`
 
+That link charges $10.00 for the bracelet. Stripe adds shipping on the checkout page (currently $2.99).
+
 The shirt and hat are **placeholders**. Their buttons stay disabled and say “Checkout not connected” until you add a real URL and set `status` to `available`.
 
 ### Plug in a real checkout link
