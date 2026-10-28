@@ -1,268 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dads for Christ</title>
-  <meta name="description" content="Dads for Christ exists to encourage fathers to lead their homes with Jesus Christ at the center." />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    header {
-      background: #111111;
-      padding: 20px 40px;
-      border-bottom: 2px solid #caa94a;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #caa94a;
-    }
-
-    .menu a {
-      color: #ffffff;
-      margin-left: 25px;
-      font-weight: bold;
-    }
-
-    .menu a:hover {
-      color: #caa94a;
-    }
-
-   .hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-
-  background:
-    linear-gradient(
-      rgba(0,0,0,.55),
-      rgba(0,0,0,.55)
-    ),
-    url('Banner.png');
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .gold {
-      color: #caa94a;
-    }
-
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 35px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 8px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .btn-gold {
-      background: #caa94a;
-      color: #000000;
-    }
-
-    .btn-outline {
-      border: 2px solid #caa94a;
-      color: #ffffff;
-    }
-
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 25px;
-    }
-
-    .section h2 {
-      color: #caa94a;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: #151515;
-      padding: 35px;
-      border-radius: 10px;
-      border: 1px solid #2c2c2c;
-      box-shadow: 0 8px 25px rgba(0,0,0,.45);
-    }
-
-    .card h3 {
-      color: #ffffff;
-      font-size: 1.6rem;
-      margin-top: 0;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #111111;
-      border-top: 1px solid #333333;
-      color: #cccccc;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        padding: 18px 20px;
-      }
-
-      nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .menu a {
-        margin: 0 8px;
-        font-size: 14px;
-      }
-
-      .hero h1 {
-        font-size: 2.6rem;
-      }
-
-      .hero p {
-        font-size: 1.05rem;
-      }
-    }
-  </style>
+  <meta name="description" content="Dads for Christ exists to encourage fathers to lead their homes with Jesus Christ at the center.">
+  <meta name="theme-color" content="#12243a">
+  <link rel="canonical" href="https://www.dadsforchrist.org/">
+  <meta property="og:site_name" content="Dads for Christ">
+  <meta property="og:title" content="Dads for Christ">
+  <meta property="og:description" content="Encouraging fathers to lead their homes with Jesus Christ at the center.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dadsforchrist.org/">
+  <meta property="og:image" content="https://www.dadsforchrist.org/img/og.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="img/banner.webp" type="image/webp">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <header>
-    <nav>
-      <div class="logo">✚ Dads for Christ</div>
-
-      <div class="menu">
-        <a href="index.html">Home</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#e0b15a"/>
+          <path d="M14.2 6h3.6v8.2H26v3.6h-8.2V26h-3.6v-8.2H6v-3.6h8.2V6z" fill="#12243a"/>
+        </svg>
+        <span>Dads for Christ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="mission.html">Mission</a>
         <a href="blog.html">Blog</a>
         <a href="store.html">Store</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html">I Said Yes</a>
         <a href="contact.html">Contact</a>
-      </div>
-    </nav>
+        <a class="btn-donate" href="donate.html">Donate</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Raising Strong Families Through <span class="gold">Jesus Christ</span></h1>
+  <main id="main" tabindex="-1">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">Our mission</p>
+          <h1>Fathers leading their families in faith.</h1>
+          <hr class="rule">
+          <p class="lede">Dads for Christ exists to encourage fathers to lead their homes, love their families, strengthen their faith, and boldly share the Gospel in a world that desperately needs Christ.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="store.html">Shop Reach One</a>
+            <a class="btn btn-brick" href="donate.html">Donate</a>
+            <a class="btn btn-ghost" href="contact.html">Contact us</a>
+          </div>
+        </div>
+        <figure class="hero-media" style="margin:0">
+          <picture>
+            <source srcset="img/banner.webp" type="image/webp">
+            <img src="Banner.png" alt="A father walks with his family toward a cross at sunset. The artwork reads: A father's calling. Lead. Love. Protect. Provide. As Christ leads us." width="1600" height="854">
+          </picture>
+        </figure>
+      </div>
+    </section>
 
-      <p>
-        Dads for Christ exists to encourage fathers to lead their homes,
-        love their families, strengthen their faith, and boldly share
-        the Gospel in a world that desperately needs Christ.
-      </p>
+    <section class="section" style="padding-top:0">
+      <div class="wrap split-60">
+        <div>
+          <p class="kicker">Why we exist</p>
+          <h2>Jesus at the center of the home.</h2>
+          <p>We believe fathers have one of the most important callings on earth. Strong fathers build strong families, and strong families build strong communities. Our mission is to help dads put Jesus at the center of their homes and inspire other men to do the same.</p>
+          <p><a href="mission.html">Read the full mission</a></p>
+        </div>
+        <blockquote class="scripture">
+          <p>“As for me and my house, we will serve the Lord.”</p>
+          <cite>Joshua 24:15</cite>
+        </blockquote>
+      </div>
+    </section>
 
-      <a href="store.html" class="btn btn-gold">Shop Reach One Bracelets</a>
-      <a href="contact.html" class="btn btn-outline">Contact Us</a>
+    <section class="section band-navy">
+      <div class="wrap split-60">
+        <figure class="frame" style="margin:0">
+          <picture>
+            <source srcset="img/reach-one.webp" type="image/webp">
+            <img src="Reach%20One.png" alt="Black woven Reach One bracelets on a wooden table. One band reads REACH ONE and the other has a shepherd's hook tag, beside a Bible. The artwork says: Every soul matters. Wear it. Share it. Reach one." width="1400" height="933">
+          </picture>
+        </figure>
+        <div>
+          <p class="kicker">Reach One</p>
+          <h2>Inspired by Luke 15:4–7</h2>
+          <blockquote class="scripture">
+            <p>“What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine in the wilderness, and go after that which is lost, until he find it?”</p>
+            <cite>Luke 15:4</cite>
+          </blockquote>
+          <p>The Reach One bracelet serves as a daily reminder that every soul matters. Jesus left the ninety-nine to seek the one lost sheep.</p>
+          <p>Wear the bracelet. Start conversations. Share the Gospel. Reach One.</p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="store.html">Shop bracelets</a>
+            <a class="btn btn-ghost-light" href="blog.html#reach-one">Read the story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Take part</p>
+        <h2>Shop, give, or walk with us.</h2>
+        <div class="cards">
+          <a class="card card-link" href="store.html">
+            <h3>Shop Reach One</h3>
+            <p>The bracelet is a daily reminder to pray for one person, encourage one person, and point one person to Jesus.</p>
+            <span>Visit the store</span>
+          </a>
+          <a class="card card-link" href="donate.html">
+            <h3>Donate</h3>
+            <p>Your gift helps us share the gospel, send free Bibles, and equip dads to lead their families with Christ at the center.</p>
+            <span>Give to the mission</span>
+          </a>
+          <a class="card card-link" href="contact.html">
+            <h3>Join and contact</h3>
+            <p>Have a prayer request, testimony, question, or want to connect with Dads for Christ? We would love to hear from you.</p>
+            <span>Contact us</span>
+          </a>
+          <a class="card card-link" href="podcast.html">
+            <h3>Podcast</h3>
+            <p>Clear, practical conversations that point dads back to Jesus. Listen on Spotify or watch on YouTube.</p>
+            <span>Listen</span>
+          </a>
+          <a class="card card-link" href="bible.html">
+            <h3>Free Bible</h3>
+            <p>We mail KJV Bibles to anyone who asks. If you are outside the U.S., we will try to help you find a copy.</p>
+            <span>Request a Bible</span>
+          </a>
+          <a class="card card-link" href="isaidyes.html">
+            <h3>I said yes</h3>
+            <p>If you said yes to Jesus, tell us. We will rejoice with you and help with next steps.</p>
+            <span>Share your yes</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="wrap split">
+        <div class="card">
+          <p class="kicker">From the blog</p>
+          <h2>What it means to reach one.</h2>
+          <p>You do not have to reach the whole world in one day. Start with one. One conversation can plant a seed. One prayer can change a life.</p>
+          <a class="btn btn-ghost" href="blog.html">Read the blog</a>
+        </div>
+        <div class="card" style="background:var(--navy);color:#f7f3eb">
+          <p class="kicker">Give</p>
+          <h2>Fuel the mission.</h2>
+          <p>One-time gifts and monthly partnership help print and ship Bibles, host the podcast, and disciple dads and families.</p>
+          <a class="btn btn-gold" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Dads for Christ</p>
+        <p>Helping fathers lead their homes back to Jesus.</p>
+        <p>Michigan nonprofit organization.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-links">
+        <a href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a>
+        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener noreferrer">Spotify</a>
+      </div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Our Mission</h2>
-
-    <div class="card">
-      <p>
-        We believe fathers have one of the most important callings on earth.
-        Strong fathers build strong families, and strong families build strong communities.
-        Our mission is to help dads put Jesus at the center of their homes and inspire
-        other men to do the same.
-      </p>
+    <div class="wrap footer-base">
+      <p>© <span data-year>2026</span> Dads for Christ</p>
+      <p>Gifts are currently not tax-deductible until 501(c)(3) approval is complete.</p>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Reach One</h2>
-
-    <div class="card">
-      <h3>Inspired by Luke 15:4-7</h3>
-
-      <p>
-        The Reach One bracelet serves as a daily reminder that every soul matters.
-        Jesus left the ninety-nine to seek the one lost sheep.
-      </p>
-
-      <p>
-        Wear the bracelet. Start conversations. Share the Gospel.
-        Reach One.
-      </p>
-
-      <a href="store.html" class="btn btn-gold">Shop Bracelets</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>From The Blog</h2>
-
-    <div class="card">
-      <p>
-        Read short messages about Biblical fatherhood, marriage, leadership,
-        faith, family, and practical ways to follow Christ in everyday life.
-      </p>
-
-      <a href="blog.html" class="btn btn-outline">Read Blog</a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Get Involved</h2>
-
-    <div class="card">
-      <p>
-        Have a prayer request, testimony, question, or want to connect with
-        Dads for Christ? We would love to hear from you.
-      </p>
-
-      <a href="contact.html" class="btn btn-gold">Contact Us</a>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Dads for Christ</p>
-    <p>Helping fathers lead their homes back to Jesus.</p>
   </footer>
-
+  <script src="site.js" defer></script>
 </body>
 </html>
-```
-

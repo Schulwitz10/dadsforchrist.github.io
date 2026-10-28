@@ -1,223 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Donate • Dads for Christ</title>
-  <meta name="description" content="Support Dads for Christ with a one-time gift or monthly partnership." />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Page-scoped styles to keep things tight and on-brand */
-    :root {
-      --bg: #0c0c0c;
-      --panel: #161616;
-      --ink: #f1f1f1;
-      --muted: #b7c1c9;
-      --gold: #FFD700;
-      --line: #242424;
-    }
-    body { background: var(--bg); color: var(--ink); }
-
-    .nav { max-width: 1100px; margin: 0 auto; display:flex; align-items:center; justify-content:space-between; padding:16px 20px; }
-    .brand { font-weight: 800; color: var(--gold); }
-    .menu a { color:#fff; margin-left:16px; }
-    .menu a:hover { color: var(--gold); }
-
-    .hero {
-      background: radial-gradient(1200px 400px at 10% -20%, #1b1b1b 0, #0c0c0c 60%);
-      padding: 64px 20px 36px;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero__inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; }
-    .hero h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 10px; }
-    .hero p { color: var(--muted); margin: 8px 0 18px; }
-    .hero__card {
-      background: linear-gradient(180deg, #1b1b1b, #121212);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.35);
-    }
-    .hero__card h3 { margin: 0 0 6px; color: var(--gold); }
-    .chiprow { display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 2px; }
-    .chip {
-      border:1px solid var(--line);
-      background:#141414;
-      color:#ddd;
-      padding:8px 12px;
-      border-radius:999px;
-      font-size:14px;
-      cursor:default;
-      user-select:none;
-    }
-
-    .cta { display:flex; gap:12px; flex-wrap:wrap; }
-    .btn { display:inline-block; padding:12px 18px; border-radius:8px; border:1px solid var(--line); background:#1a1a1a; color:#fff; }
-    .btn:hover { border-color:#333; }
-    .btn--gold { background: var(--gold); color:#000; font-weight:800; border-color: #e1c100; }
-    .btn--gold:hover { filter: brightness(0.95); }
-    .btn--ghost { background: transparent; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px; }
-
-    .grid { display:grid; gap:18px; grid-template-columns: repeat(3,1fr); }
-    .card {
-      background: linear-gradient(180deg, #171717, #111);
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:20px;
-    }
-    .card h3 { margin:0 0 8px; color: var(--gold); }
-    .card p { color: var(--muted); }
-
-    .impact { display:grid; gap:12px; grid-template-columns: repeat(3,1fr); margin-top:8px; }
-    .impact__item { background:#111; border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; }
-    .impact__num { font-size:28px; font-weight:900; color: var(--gold); }
-    .impact__label { color:#c9d2da; font-size:14px; }
-
-    .faq { margin-top: 8px; }
-    details {
-      background:#101010; border:1px solid var(--line);
-      border-radius:10px; padding:12px 16px; margin:10px 0;
-    }
-    summary { cursor:pointer; font-weight:700; }
-    details p { margin-top:8px; color:var(--muted); }
-
-    .trust { display:flex; gap:12px; align-items:center; color:#c9d2da; font-size:14px; flex-wrap:wrap; }
-    .dot { width:6px; height:6px; border-radius:50%; background:#3a3a3a; display:inline-block; }
-
-    .footer { border-top: 1px solid var(--line); padding:20px; color:#c9d2da; }
-    .footer__inner { max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; }
-    @media (max-width: 880px) {
-      .hero__inner { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      .impact { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate · Dads for Christ</title>
+  <meta name="description" content="Support Dads for Christ with a one-time gift or monthly partnership.">
+  <meta name="theme-color" content="#12243a">
+  <link rel="canonical" href="https://www.dadsforchrist.org/donate.html">
+  <meta property="og:title" content="Donate · Dads for Christ">
+  <meta property="og:description" content="Support Dads for Christ with a one-time gift or monthly partnership.">
+  <meta property="og:image" content="https://www.dadsforchrist.org/img/og.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="nav">
-      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
-      <nav class="menu">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#e0b15a"/>
+          <path d="M14.2 6h3.6v8.2H26v3.6h-8.2V26h-3.6v-8.2H6v-3.6h8.2V6z" fill="#12243a"/>
+        </svg>
+        <span>Dads for Christ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
         <a href="podcast.html">Podcast</a>
-        <a href="isaidyes.html">I Said Yes</a>
         <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn-donate" href="donate.html" aria-current="page">Donate</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero__inner">
-      <div>
-        <h1>Fuel the Mission</h1>
-        <p>Your gift helps us share the gospel, send free Bibles, and equip dads to lead their families with Christ at the center.</p>
-        <div class="chiprow">
-          <span class="chip">$10</span>
-          <span class="chip">$25</span>
-          <span class="chip">$50</span>
-          <span class="chip">$100</span>
-          <span class="chip">$250</span>
-        </div>
-        <div class="cta" style="margin-top:10px">
-          <!-- TODO: replace with your live payment links -->
-          <a class="btn btn--gold" href="https://buy.stripe.com/YOUR_ONETIME_LINK" target="_blank" rel="noopener">Give a One-Time Gift</a>
-          <a class="btn" href="https://buy.stripe.com/YOUR_MONTHLY_LINK" target="_blank" rel="noopener">Become a Monthly Partner</a>
-        </div>
-        <p style="color:#c9d2da; margin-top:10px;">We never store card data on our site—payments are processed securely by our provider.</p>
-      </div>
-
-      <div class="hero__card">
-        <h3>Where your gift goes</h3>
-        <p>• Printing & shipping Bibles<br/>• Production & hosting for the podcast<br/>• Resources to disciple dads & families</p>
-        <div class="trust" style="margin-top:10px;">
-          <span>Secure checkout</span><span class="dot"></span>
-          <span>No spam—ever</span><span class="dot"></span>
-          <span>Cancel monthly anytime</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BODY -->
-  <main class="container">
-
-    <section class="grid">
-      <div class="card">
-        <h3>One-Time Boost</h3>
-        <p>Help cover immediate needs like Bible shipments and equipment.</p>
-        <a class="btn btn--gold" href="https://buy.stripe.com/YOUR_ONETIME_LINK" target="_blank" rel="noopener">Give One-Time</a>
-      </div>
-
-      <div class="card">
-        <h3>Monthly Partner</h3>
-        <p>Steady support that lets us plan more outreach, episodes, and Bible mailings.</p>
-        <a class="btn" href="https://buy.stripe.com/YOUR_MONTHLY_LINK" target="_blank" rel="noopener">Give Monthly</a>
-      </div>
-
-      <div class="card">
-        <h3>Share & Pray</h3>
-        <p>Pray for dads and families, and share Dads for Christ with a friend who needs hope.</p>
-        <a class="btn btn--ghost" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">Share the Channel</a>
+  <main id="main" tabindex="-1">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Give</p>
+        <h1>Fuel the mission.</h1>
+        <p class="lede">Your gift helps us share the gospel, send free Bibles, and equip dads to lead their families with Christ at the center.</p>
       </div>
     </section>
 
-    <section class="card" style="margin-top:18px;">
-      <h3>Impact so far</h3>
-      <div class="impact">
-        <div class="impact__item">
-          <div class="impact__num">–––</div>
-          <div class="impact__label">Bibles Sent</div>
+    <section class="section-tight">
+      <div class="wrap split-60">
+        <div id="donate-app">
+          <div id="donate-callout" class="callout" role="status">
+            <h2>Loading giving options…</h2>
+          </div>
+          <noscript>
+            <div class="callout">
+              <h2>Checkout not connected yet</h2>
+              <p>Online amounts need JavaScript and a payment link in donations.json. Email <a href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a> about a one-time gift or a monthly partnership. Nothing on this page charges a card until those links are added.</p>
+            </div>
+          </noscript>
+          <h2>Suggested amounts</h2>
+          <p>Choose a one-time amount. A connected amount opens secure checkout. A gray amount is a placeholder and does not take payment.</p>
+          <div id="donate-amounts" class="amount-row" aria-label="Suggested gift amounts"></div>
+          <div id="donate-actions" class="cta-row"></div>
+          <p class="note">We never store card data on our site. Payments are processed by the checkout provider. Monthly gifts can be changed or canceled from the receipt.</p>
         </div>
-        <div class="impact__item">
-          <div class="impact__num">–––</div>
-          <div class="impact__label">Families Helped</div>
-        </div>
-        <div class="impact__item">
-          <div class="impact__num">–––</div>
-          <div class="impact__label">Episodes Released</div>
-        </div>
+        <aside class="card">
+          <h2>Where your gift goes</h2>
+          <ul class="clean-list">
+            <li>Printing and shipping Bibles</li>
+            <li>Production and hosting for the podcast</li>
+            <li>Resources to disciple dads and families</li>
+          </ul>
+          <p class="note">Secure checkout. No spam — ever. Cancel a monthly gift anytime.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="card" style="margin-top:18px;">
-      <h3>FAQ</h3>
-      <div class="faq">
-        <details>
-          <summary>Are gifts tax-deductible?</summary>
-          <p>If you are not yet approved as a 501(c)(3), add: “Gifts are currently <strong>not tax-deductible</strong> until our 501(c)(3) approval is complete.” Once approved, update this line to reflect tax-deductible status.</p>
-        </details>
-        <details>
-          <summary>Can I cancel a monthly gift?</summary>
-          <p>Yes—every monthly plan includes a “manage subscription” link in your receipt, so you can change or cancel anytime.</p>
-        </details>
-        <details>
-          <summary>Is online giving secure?</summary>
-          <p>Yes. All payments are processed by a PCI-compliant provider over encrypted connections. We never store your card info on our site.</p>
-        </details>
+    <section class="section" style="padding-top:0">
+      <div class="wrap stack">
+        <div class="cards">
+          <article class="card">
+            <h3>One-time boost</h3>
+            <p>Help cover immediate needs like Bible shipments and equipment.</p>
+          </article>
+          <article class="card">
+            <h3>Monthly partner</h3>
+            <p>Steady support that lets us plan more outreach, episodes, and Bible mailings. Every monthly plan includes a manage-subscription link in the receipt, so you can change or cancel anytime.</p>
+          </article>
+          <article class="card">
+            <h3>Share and pray</h3>
+            <p>Pray for dads and families, and share Dads for Christ with a friend who needs hope.</p>
+            <a class="btn btn-ghost" href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener noreferrer">Share the channel</a>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Impact so far</h3>
+          <p class="note">Counts will be added here when we have them to share. These are not estimates.</p>
+          <div class="impact">
+            <div class="impact-item">
+              <div class="impact-num">—</div>
+              <div>Bibles sent</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-num">—</div>
+              <div>Families helped</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-num">—</div>
+              <div>Episodes released</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card faq">
+          <h3>Questions</h3>
+          <details>
+            <summary>Are gifts tax-deductible?</summary>
+            <p>Gifts are currently <strong>not tax-deductible</strong> until our 501(c)(3) approval is complete.</p>
+          </details>
+          <details>
+            <summary>Can I cancel a monthly gift?</summary>
+            <p>Yes. Every monthly plan includes a manage-subscription link in your receipt, so you can change or cancel anytime.</p>
+          </details>
+          <details>
+            <summary>Is online giving secure?</summary>
+            <p>Yes. All payments are processed by a PCI-compliant provider over encrypted connections. We never store your card info on our site.</p>
+          </details>
+          <details>
+            <summary>Why do some buttons say placeholder?</summary>
+            <p>The previous donate page pointed at unfinished Stripe links (<code>YOUR_ONETIME_LINK</code> and <code>YOUR_MONTHLY_LINK</code>). Those were not live checkouts. This page keeps giving visible, and it will not pretend a button can take a payment until a real link is saved in donations.json.</p>
+          </details>
+        </article>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <span>© <span id="year"></span> Dads for Christ</span>
-      <div class="trust">
-        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener">YouTube</a>
-        <span class="dot"></span>
-        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener">Spotify</a>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Dads for Christ</p>
+        <p>Helping fathers lead their homes back to Jesus.</p>
+        <p>Michigan nonprofit organization.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-links">
+        <a href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a>
+        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener noreferrer">Spotify</a>
       </div>
     </div>
+    <div class="wrap footer-base">
+      <p>© <span data-year>2026</span> Dads for Christ</p>
+      <p>Gifts are currently not tax-deductible until 501(c)(3) approval is complete.</p>
+    </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="site.js" defer></script>
 </body>
 </html>
-

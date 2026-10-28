@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#efe8da"/>
+  <path fill="#fffdf8" stroke="#12243a" stroke-width="8" stroke-linejoin="round" d="M210 196c8-48 40-78 90-78s82 30 90 78"/>
+  <path fill="#fffdf8" stroke="#12243a" stroke-width="8" stroke-linejoin="round" d="M150 214c28 10 74 18 150 18s122-8 150-18c-8 36-58 58-150 58s-142-22-150-58z"/>
+  <text x="300" y="330" text-anchor="middle" font-family="Georgia, 'Palatino Linotype', Palatino, serif" font-size="28" fill="#5c564c">Coming soon</text>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "_help": "Add or edit merch here. This file is the only place the store reads. For a live item set status to \"available\" and paste an https checkout URL (Stripe Payment Link, Shopify checkout, or similar) into checkoutUrl. Until that URL exists, keep status as \"placeholder\" and checkoutUrl as an empty string. The button will stay disabled and labeled as a placeholder. See README.md for step-by-step instructions.",
+  "products": [
+    {
+      "id": "reach-one-bracelet",
+      "name": "Reach One Bracelet",
+      "price": "$10.00",
+      "status": "available",
+      "featured": true,
+      "image": "img/reach-one.webp",
+      "imageFallback": "Reach%20One.png",
+      "alt": "Black woven Reach One bracelets on a wooden table. One band reads REACH ONE and the other has a shepherd's hook tag, beside a Bible.",
+      "summary": "The Reach One Bracelet is a daily reminder to live with purpose, share the Gospel, and remember that every soul matters. Inspired by the shepherd who goes after the one lost sheep, this bracelet encourages believers to reach one person for Christ.",
+      "details": [
+        "Black woven bracelet",
+        "REACH ONE front design",
+        "Shepherd's hook emblem on back",
+        "One size fits most",
+        "Ships from Michigan",
+        "Supports the mission of Dads for Christ"
+      ],
+      "checkoutUrl": "https://buy.stripe.com/cNi3cu24Qe9zfGD1gx7Vm01",
+      "checkoutLabel": "Buy now — $10.00",
+      "note": "Every purchase helps support the mission of Dads for Christ as we strengthen families and share the Gospel. Checkout opens on Stripe."
+    },
+    {
+      "id": "reach-one-shirt",
+      "name": "Reach One T-Shirt",
+      "price": "Price not set",
+      "status": "placeholder",
+      "featured": false,
+      "image": "img/placeholder-shirt.svg",
+      "imageFallback": "img/placeholder-shirt.svg",
+      "alt": "Placeholder illustration of a t-shirt marked coming soon",
+      "summary": "Room for a future Reach One shirt. This listing is not for sale until a hosted checkout link is added.",
+      "details": [
+        "Not for sale yet",
+        "Replace this summary, price, and image when the shirt is ready",
+        "Paste a checkout URL into checkoutUrl and set status to available"
+      ],
+      "checkoutUrl": "",
+      "checkoutLabel": "Checkout not connected",
+      "note": "Placeholder — this is not a live checkout. Add a Stripe Payment Link or other hosted checkout URL in products.json."
+    },
+    {
+      "id": "reach-one-hat",
+      "name": "Reach One Hat",
+      "price": "Price not set",
+      "status": "placeholder",
+      "featured": false,
+      "image": "img/placeholder-hat.svg",
+      "imageFallback": "img/placeholder-hat.svg",
+      "alt": "Placeholder illustration of a hat marked coming soon",
+      "summary": "Room for a future Reach One hat. This listing is not for sale until a hosted checkout link is added.",
+      "details": [
+        "Not for sale yet",
+        "Replace this summary, price, and image when the hat is ready",
+        "Paste a checkout URL into checkoutUrl and set status to available"
+      ],
+      "checkoutUrl": "",
+      "checkoutLabel": "Checkout not connected",
+      "note": "Placeholder — this is not a live checkout. Add a Stripe Payment Link or other hosted checkout URL in products.json."
+    }
+  ]
+}
