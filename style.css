@@ -707,6 +707,75 @@ textarea { min-height: 140px; resize: vertical; }
   .section { padding: 3rem 0; }
 }
 
+.post-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.85rem;
+}
+
+.post-layout { max-width: 740px; }
+
+.post-body {
+  font-size: 1.125rem;
+  max-width: 68ch;
+}
+
+.post-body h2 {
+  font-size: 1.6rem;
+  margin: 1.6rem 0 0.6rem;
+}
+
+.post-body li { margin: 0.45rem 0; }
+
+.post-figure { margin: 0 0 1.25rem; }
+
+.post-cta { margin-top: 2rem; }
+
+.post-share {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.post-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.post-pager a {
+  display: block;
+  height: 100%;
+  padding: 0.9rem 1rem;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.post-pager .label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--forest);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.post-pager .next { text-align: right; }
+
+@media (max-width: 640px) {
+  .post-pager { grid-template-columns: 1fr; }
+  .post-pager .next { text-align: left; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *,

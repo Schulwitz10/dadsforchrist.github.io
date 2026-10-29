@@ -12,7 +12,7 @@ From this folder:
 python3 -m http.server 8765
 ```
 
-Open `http://127.0.0.1:8765/`. The store and donate pages load `products.json` and `donations.json`, so they need a local server (opening the HTML files directly will not load those lists).
+Open `http://127.0.0.1:8765/`. The store, donate page, and blog list load JSON files, so they need a local server (opening the HTML files directly will not load those lists).
 
 ## Pages
 
@@ -30,6 +30,36 @@ Open `http://127.0.0.1:8765/`. The store and donate pages load `products.json` a
 | Thank you | `thanks.html` |
 
 Navigation and the footer are repeated on each page. If you add a page, add a link in both places on every file, and in `style.css` you do not need a new rule.
+
+Daily posts live in the `blog/` folder. The list on `blog.html` and the three latest posts on the home page are read from `posts.json`. The feed is `feed.xml`.
+
+## Publish a daily post
+
+Do these steps in order. There is no build step. After you push, GitHub Pages publishes the new file.
+
+1. Copy `blog/_TEMPLATE.html` to a new file named `blog/YYYY-MM-DD-slug.html`. Use the date you are publishing and a short slug, for example `blog/2026-10-30-lead-with-prayer.html`.
+2. Open the new file and replace every `TITLE_HERE`, `DATE_ISO`, `DATE_LABEL`, `EXCERPT_HERE`, and `SLUG_HERE` token, including the canonical URL, the share links, and `data-url`. Write the post in the article body. Keep the closing box that links to the mission, the Reach One bracelet, and donate.
+3. Add an entry at the **top** of the `posts` array in `posts.json` (newest first):
+
+```json
+{
+  "date": "2026-10-30",
+  "dateLabel": "",
+  "title": "Lead with Prayer",
+  "slug": "lead-with-prayer",
+  "url": "blog/2026-10-30-lead-with-prayer.html",
+  "excerpt": "One or two sentences for the blog list and the home page.",
+  "image": "img/blog.webp",
+  "imageAlt": "Describe the picture."
+}
+```
+
+Leave `image` as `""` if the post has no picture. `dateLabel` is optional. If you leave it blank, the list formats `date`. Previous and next links on each post are filled from this file, so you do not edit them by hand.
+
+4. Add a new `<item>` at the **top** of `feed.xml`, inside `<channel>`, with the title, the full `https://www.dadsforchrist.org/blog/...` link, the same link as `<guid>`, an RFC-822 `<pubDate>`, and the excerpt inside `<description>`.
+5. Commit and push to the branch GitHub Pages serves (usually `main`).
+
+The home page shows the three newest entries from `posts.json`. `blog.html` shows the full list and replaces the old “Coming soon” cards.
 
 ## Edit the store
 
