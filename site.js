@@ -30,6 +30,9 @@
 
   if (document.getElementById("product-grid")) renderStore();
   if (document.getElementById("donate-app")) renderDonate();
+  if (document.getElementById("post-list") || document.getElementById("home-posts") || document.getElementById("post-pager")) {
+    renderPosts();
+  }
 
   function escapeHtml(value) {
     return String(value == null ? "" : value).replace(/[&<>"']/g, function (char) {
@@ -203,6 +206,103 @@
       return '<a class="amount" href="' + escapeHtml(item.url.trim()) + '" target="_blank" rel="noopener noreferrer">' + label + '<span class="sr-only"> ' + escapeHtml(kind) + ", opens secure checkout</span></a>";
     }
     return '<button class="amount" type="button" disabled>' + label + '<span class="sr-only"> not connected</span></button>';
+  }
+
+  function depthPrefix() {
+    return document.body.getAttribute("data-depth") === "blog" ? "../" : "";
+  }
+
+  function postHref(url) {
+    var path = String(url || "");
+    if (document.body.getAttribute("data-depth") === "blog") return path.replace(/^blog\//, "");
+    return path;
+  }
+
+  function formatDate(iso) {
+    var parts = String(iso || "").split("-");
+    if (parts.length < 3) return iso || "";
+    var date = new Date(Date.UTC(Number(parts[0]), Number(parts[1]) - 1, Number(parts[2])));
+    if (isNaN(date.getTime())) return iso;
+    return date.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+  }
+
+  function postDate(post) {
+    return post.dateLabel || formatDate(post.date);
+  }
+
+  function renderPosts() {
+    fetch(depthPrefix() + "posts.json")
+      .then(function (response) {
+        if (!response.ok) throw new Error("Could not load posts");
+        return response.json();
+      })
+      .then(function (data) {
+        var posts = ((data && data.posts) || []).slice().sort(function (a, b) {
+          if (a.date === b.date) return 0;
+          return a.date < b.date ? 1 : -1;
+        });
+        var list = document.getElementById("post-list");
+        var home = document.getElementById("home-posts");
+        if (list) {
+          list.innerHTML = posts.length
+            ? posts.map(postCard).join("")
+            : "<p>No posts yet. Add one in posts.json.</p>";
+        }
+        if (home) {
+          var latest = posts.slice(0, 3);
+          home.innerHTML = latest.length
+            ? latest.map(postCard).join("")
+            : "<p>New posts will appear here.</p>";
+        }
+        renderPostPager(posts);
+      })
+      .catch(function () {
+        var list = document.getElementById("post-list");
+        var home = document.getElementById("home-posts");
+        if (list) list.innerHTML = "<p>The post list could not be loaded.</p>";
+        if (home) home.innerHTML = "<p><a href=\"blog.html\">Read the blog</a></p>";
+      });
+  }
+
+  function postCard(post) {
+    var href = escapeHtml(postHref(post.url));
+    var image = "";
+    if (post.image) {
+      image = '<img src="' + escapeHtml(depthPrefix() + post.image) + '" alt="' + escapeHtml(post.imageAlt || "") + '" width="1200" height="800" loading="lazy">';
+    }
+    return (
+      '<article class="card post-card">' +
+        image +
+        '<p class="note">' + escapeHtml(postDate(post)) + "</p>" +
+        '<h3><a href="' + href + '">' + escapeHtml(post.title || "Post") + "</a></h3>" +
+        "<p>" + escapeHtml(post.excerpt || "") + "</p>" +
+        '<a class="btn btn-ghost" href="' + href + '">Read</a>' +
+      "</article>"
+    );
+  }
+
+  function renderPostPager(posts) {
+    var pager = document.getElementById("post-pager");
+    if (!pager) return;
+    var current = pager.getAttribute("data-url");
+    var index = -1;
+    posts.forEach(function (post, i) {
+      if (post.url === current) index = i;
+    });
+    if (index < 0) {
+      pager.innerHTML = "";
+      return;
+    }
+    var newer = posts[index - 1];
+    var older = posts[index + 1];
+    pager.innerHTML =
+      "<div>" + pagerLink(older, "Previous") + "</div>" +
+      '<div class="next">' + pagerLink(newer, "Next") + "</div>";
+  }
+
+  function pagerLink(post, label) {
+    if (!post) return "";
+    return '<a href="' + escapeHtml(postHref(post.url)) + '"><span class="label">' + label + "</span>" + escapeHtml(post.title) + "</a>";
   }
 
   function giftButton(live, url, label, style) {
