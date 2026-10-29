@@ -488,10 +488,19 @@ code {
   object-fit: contain;
 }
 
+#donate-app h2 {
+  margin-top: 1.5rem;
+}
+
+#donate-app > h2:first-of-type {
+  margin-top: 0;
+}
+
 .amount-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
+  margin-bottom: 0.4rem;
 }
 
 .amount {

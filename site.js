@@ -138,6 +138,7 @@
     var callout = document.getElementById("donate-callout");
     var amounts = document.getElementById("donate-amounts");
     var actions = document.getElementById("donate-actions");
+    var monthly = document.getElementById("donate-monthly");
     fetch("donations.json")
       .then(function (response) {
         if (!response.ok) throw new Error("Could not load donations");
@@ -145,49 +146,69 @@
       })
       .then(function (data) {
         var amountList = (data && data.amounts) || [];
+        var monthlyList = (data && data.monthly) || [];
         var liveAmounts = amountList.filter(function (item) { return isLiveUrl(item.url); }).length;
+        var liveMonthly = monthlyList.filter(function (item) { return isLiveUrl(item.url); }).length;
         var oneTime = isLiveUrl(data.oneTimeUrl);
-        var monthly = isLiveUrl(data.monthlyUrl);
-        var anyLive = liveAmounts > 0 || oneTime || monthly;
+        var legacyMonthly = isLiveUrl(data.monthlyUrl);
+        var anyLive = liveAmounts > 0 || liveMonthly > 0 || oneTime || legacyMonthly;
+        var amountsComplete = amountList.length > 0 && liveAmounts === amountList.length;
+        var monthlyComplete = (monthlyList.length > 0 && liveMonthly === monthlyList.length) || (monthlyList.length === 0 && legacyMonthly);
 
-        callout.hidden = false;
-        callout.className = "callout";
         if (!anyLive) {
+          callout.hidden = false;
+          callout.className = "callout";
           callout.innerHTML =
             "<h2>Checkout not connected yet</h2>" +
-            "<p>These amounts and buttons are <strong>placeholders</strong>. They do not take a payment. To give now, email <a href=\"mailto:dadsforchrist@gmail.com\">dadsforchrist@gmail.com</a>. Whoever updates the site can connect Stripe, or another hosted checkout, in <code>donations.json</code>.</p>";
-        } else if (liveAmounts < amountList.length || !oneTime || !monthly) {
+            "<p>These amounts are not linked to Stripe yet. Email <a href=\"mailto:dadsforchrist@gmail.com\">dadsforchrist@gmail.com</a> to give.</p>";
+        } else if (!amountsComplete || !monthlyComplete || !oneTime) {
+          callout.hidden = false;
+          callout.className = "callout";
           callout.innerHTML =
-            "<h2>Some giving links are still placeholders</h2>" +
-            "<p>Links open a secure checkout. Gray amounts are not connected yet. Finish them in <code>donations.json</code>.</p>";
+            "<h2>Some giving links are still missing</h2>" +
+            "<p>Linked amounts open Stripe. Gray amounts are not connected yet. Finish them in <code>donations.json</code>.</p>";
         } else {
           callout.hidden = true;
           callout.innerHTML = "";
         }
 
         amounts.innerHTML = amountList.map(function (item) {
-          var label = escapeHtml(item.label || ("$" + item.dollars));
-          if (isLiveUrl(item.url)) {
-            return '<a class="amount" href="' + escapeHtml(item.url.trim()) + '" target="_blank" rel="noopener noreferrer">Give ' + label + '<span class="sr-only"> — opens secure checkout</span></a>';
-          }
-          return '<button class="amount" type="button" disabled>' + label + '<span class="sr-only"> placeholder, checkout not connected</span></button>';
+          return amountLink(item, "one-time gift");
         }).join("");
 
-        actions.innerHTML =
-          giftButton(oneTime, data.oneTimeUrl, "Give a one-time gift", "btn-brick") +
-          giftButton(monthly, data.monthlyUrl, "Become a monthly partner", "btn-ghost");
+        actions.innerHTML = giftButton(oneTime, data.oneTimeUrl, data.oneTimeLabel || "Give any amount", "btn-brick");
+
+        if (monthly) {
+          var monthlyHtml = monthlyList.map(function (item) {
+            return amountLink(item, "monthly gift");
+          }).join("");
+          if (legacyMonthly && !monthlyList.length) {
+            monthlyHtml = giftButton(true, data.monthlyUrl, "Become a monthly partner", "btn-ghost");
+          }
+          monthly.innerHTML = monthlyHtml;
+        }
       })
       .catch(function () {
+        callout.hidden = false;
+        callout.className = "callout";
         callout.innerHTML =
           "<h2>Giving options could not be loaded</h2>" +
           "<p>Email <a href=\"mailto:dadsforchrist@gmail.com\">dadsforchrist@gmail.com</a> and we will help you give. Online buttons are not available until donations.json loads.</p>";
       });
   }
 
+  function amountLink(item, kind) {
+    var label = escapeHtml(item.label || ("$" + item.dollars));
+    if (isLiveUrl(item.url)) {
+      return '<a class="amount" href="' + escapeHtml(item.url.trim()) + '" target="_blank" rel="noopener noreferrer">' + label + '<span class="sr-only"> ' + escapeHtml(kind) + ", opens secure checkout</span></a>";
+    }
+    return '<button class="amount" type="button" disabled>' + label + '<span class="sr-only"> not connected</span></button>';
+  }
+
   function giftButton(live, url, label, style) {
     if (live) {
       return '<a class="btn ' + style + '" href="' + escapeHtml(url.trim()) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(label) + "</a>";
     }
-    return '<button class="btn btn-placeholder" type="button" disabled>' + escapeHtml(label) + " — placeholder</button>";
+    return '<button class="btn btn-placeholder" type="button" disabled>' + escapeHtml(label) + "</button>";
   }
 })();
