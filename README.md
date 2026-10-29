@@ -77,26 +77,30 @@ To add another product, copy one object in the `products` array, give it a new `
 
 ## Edit donations
 
-Giving links live in **`donations.json`**. The old donate page used `https://buy.stripe.com/YOUR_ONETIME_LINK` and `https://buy.stripe.com/YOUR_MONTHLY_LINK`. Those were not real checkouts, so this page does not send people there. Until you paste working URLs, the amounts and buttons are labeled **placeholder** and cannot be clicked.
+Giving links live in **`donations.json`**. Every control on the donate page is a live Stripe link. Checkout returns the donor to `/thanks.html`. Card numbers are entered on Stripe, not on this site.
 
-| Field | What to put |
+| Field | What it does now |
 | --- | --- |
-| `oneTimeUrl` | A Payment Link for a one-time gift, or `""` |
-| `monthlyUrl` | A **recurring** Payment Link for monthly partnership, or `""` |
-| `amounts` | Suggested gifts. Each object has `label`, `dollars`, and its own `url` |
+| `oneTimeUrl` | Open one-time gift. The donor chooses the amount. Stripe presets $25 and accepts a minimum of $1. The button label is `oneTimeLabel` (“Give any amount”). |
+| `amounts` | Fixed one-time gifts: $10, $25, $50, $100, and $250. Each object has `label`, `dollars`, and its own `url`. |
+| `monthly` | Recurring monthly tiers: $10, $25, $50, and $100. Same shape as `amounts`. |
 
-Stripe charges the price saved on the Payment Link, not the words on the button. Create a separate Payment Link for $10, $25, $50, $100, and $250 if you want those chips to check out at those amounts. Do not point every amount at one link.
+Current links:
 
-### Connect Stripe
+| Gift | URL |
+| --- | --- |
+| Any amount (one-time) | `https://donate.stripe.com/14A28qcJue9zgKHf7n7Vm02` |
+| $10 one-time | `https://donate.stripe.com/6oU9AS8te5D3fGD8IZ7Vm03` |
+| $25 one-time | `https://donate.stripe.com/3cI5kC9xi0iJamj5wN7Vm04` |
+| $50 one-time | `https://donate.stripe.com/dRm4gygZKd5veCze3j7Vm05` |
+| $100 one-time | `https://donate.stripe.com/dRmeVc4cY5D33XV6AR7Vm06` |
+| $250 one-time | `https://donate.stripe.com/8x27sKdNyfdDeCzf7n7Vm07` |
+| $10/month | `https://buy.stripe.com/14A4gyfVGfdD1PNcZf7Vm08` |
+| $25/month | `https://buy.stripe.com/4gM6oGbFqfdDdyv2kB7Vm09` |
+| $50/month | `https://buy.stripe.com/3cIdR86l66H72TR0ct7Vm0a` |
+| $100/month | `https://buy.stripe.com/9B63cu9xi5D3fGDgbr7Vm0b` |
 
-1. In Stripe, create a one-time price for each suggested amount and copy each Payment Link into that amount’s `url`.
-2. Create a recurring monthly price and paste that Payment Link into `monthlyUrl`.
-3. If you also want one general one-time button (a single amount, or a Stripe link you choose), paste it into `oneTimeUrl`.
-4. Commit and push.
-
-After a URL is saved, that control becomes a real link and opens Stripe. Gray buttons are still placeholders. Card numbers are entered on Stripe, not on this site.
-
-Shopify or another hosted giving page works the same way: paste the `https://` URL into the field you want.
+Stripe charges the price saved on that link. Keep a separate URL for each amount. To change a gift, paste the new `https://` link into the matching field and push. An empty `url` turns that button back into a disabled control so it cannot pretend to take a payment. Home-page Donate buttons go to `donate.html`; they do not have their own checkout URLs.
 
 When 501(c)(3) approval is finished, update the tax sentence in the footer of each page, the FAQ on `donate.html`, and the stewardship note on `mission.html`. Until then the site says gifts are not tax-deductible.
 

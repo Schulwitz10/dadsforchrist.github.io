@@ -58,16 +58,20 @@
             <h2>Loading giving options…</h2>
           </div>
           <noscript>
-            <div class="callout">
-              <h2>Checkout not connected yet</h2>
-              <p>Online amounts need JavaScript and a payment link in donations.json. Email <a href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a> about a one-time gift or a monthly partnership. Nothing on this page charges a card until those links are added.</p>
-            </div>
+            <h2>One-time gift</h2>
+            <p><a href="https://donate.stripe.com/6oU9AS8te5D3fGD8IZ7Vm03">Give $10</a> · <a href="https://donate.stripe.com/3cI5kC9xi0iJamj5wN7Vm04">Give $25</a> · <a href="https://donate.stripe.com/dRm4gygZKd5veCze3j7Vm05">Give $50</a> · <a href="https://donate.stripe.com/dRmeVc4cY5D33XV6AR7Vm06">Give $100</a> · <a href="https://donate.stripe.com/8x27sKdNyfdDeCzf7n7Vm07">Give $250</a></p>
+            <p><a href="https://donate.stripe.com/14A28qcJue9zgKHf7n7Vm02">Give any amount</a> (starts at $25, minimum $1)</p>
+            <h2>Monthly partner</h2>
+            <p><a href="https://buy.stripe.com/14A4gyfVGfdD1PNcZf7Vm08">$10/month</a> · <a href="https://buy.stripe.com/4gM6oGbFqfdDdyv2kB7Vm09">$25/month</a> · <a href="https://buy.stripe.com/3cIdR86l66H72TR0ct7Vm0a">$50/month</a> · <a href="https://buy.stripe.com/9B63cu9xi5D3fGDgbr7Vm0b">$100/month</a></p>
           </noscript>
-          <h2>Suggested amounts</h2>
-          <p>Choose a one-time amount. A connected amount opens secure checkout. A gray amount is a placeholder and does not take payment.</p>
-          <div id="donate-amounts" class="amount-row" aria-label="Suggested gift amounts"></div>
+          <h2>One-time gift</h2>
+          <p>Choose a suggested amount, or give any amount. The open gift starts at $25 and can be as little as $1.</p>
+          <div id="donate-amounts" class="amount-row" aria-label="One-time gift amounts"></div>
           <div id="donate-actions" class="cta-row"></div>
-          <p class="note">We never store card data on our site. Payments are processed by the checkout provider. Monthly gifts can be changed or canceled from the receipt.</p>
+          <h2>Monthly partner</h2>
+          <p>Choose a monthly amount. Steady support lets us plan outreach, episodes, and Bible mailings. You can change or cancel from the receipt.</p>
+          <div id="donate-monthly" class="amount-row" aria-label="Monthly partnership amounts"></div>
+          <p class="note">We never store card data on our site. Stripe processes the payment and returns you to our thank-you page. Monthly gifts can be changed or canceled from the receipt.</p>
         </div>
         <aside class="card">
           <h2>Where your gift goes</h2>
@@ -133,8 +137,8 @@
             <p>Yes. All payments are processed by a PCI-compliant provider over encrypted connections. We never store your card info on our site.</p>
           </details>
           <details>
-            <summary>Why do some buttons say placeholder?</summary>
-            <p>The previous donate page pointed at unfinished Stripe links (<code>YOUR_ONETIME_LINK</code> and <code>YOUR_MONTHLY_LINK</code>). Those were not live checkouts. This page keeps giving visible, and it will not pretend a button can take a payment until a real link is saved in donations.json.</p>
+            <summary>What happens after I give?</summary>
+            <p>Checkout finishes on Stripe, then you return to our thank-you page. Stripe emails a receipt. A monthly gift can be changed or canceled from that receipt.</p>
           </details>
         </article>
       </div>
