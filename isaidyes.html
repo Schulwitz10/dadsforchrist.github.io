@@ -1,69 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>I Said Yes to Jesus • Dads for Christ</title>
-  <meta name="description" content="Tell us you said yes to Jesus. We’ll celebrate and help with next steps." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I Said Yes to Jesus · Dads for Christ</title>
+  <meta name="description" content="Tell us you said yes to Jesus. We’ll celebrate and help with next steps.">
+  <meta name="theme-color" content="#12243a">
+  <link rel="canonical" href="https://www.dadsforchrist.org/isaidyes.html">
+  <meta property="og:title" content="I Said Yes to Jesus · Dads for Christ">
+  <meta property="og:description" content="Tell us you said yes to Jesus. We’ll celebrate and help with next steps.">
+  <meta property="og:image" content="https://www.dadsforchrist.org/img/og.jpg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="brand">✚ Dads for <span style="color:#fff">Christ</span></div>
-      <nav class="menu">
-        <a href="index.html#podcast">Podcast</a>
-        <a href="index.html#mission">Mission</a>
-        <a class="btn-nav" href="bible.html">Free Bible</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <rect width="32" height="32" rx="8" fill="#e0b15a"/>
+          <path d="M14.2 6h3.6v8.2H26v3.6h-8.2V26h-3.6v-8.2H6v-3.6h8.2V6z" fill="#12243a"/>
+        </svg>
+        <span>Dads for Christ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="nav-toggle-label">Menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html" aria-current="page">I Said Yes</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn-donate" href="donate.html">Donate</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h2>I Said Yes to Jesus</h2>
-      <p>We’re rejoicing with you! Share a few details so we can pray for you and help with your next steps (Bible, a solid local church, and helpful resources).</p>
+  <main id="main" tabindex="-1">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="kicker">Good news</p>
+        <h1>I said yes to Jesus.</h1>
+        <p class="lede">We’re rejoicing with you! Share a few details so we can pray for you and help with your next steps (Bible, a solid local church, and helpful resources).</p>
+      </div>
+    </section>
 
-      <!-- Formspree endpoint wired -->
-      <form action="https://formspree.io/f/mdklrnwp" method="POST" style="margin-top:1rem;">
-        <label>Full Name<br/>
-          <input type="text" name="name" required
-                 style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>Email<br/>
-          <input type="email" name="_replyto" required
-                 style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>City / State (or Country)<br/>
-          <input type="text" name="location"
-                 style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;">
-        </label>
-        <label>Tell us briefly what God did today<br/>
-          <textarea name="story" rows="5"
-                    style="width:100%;padding:.7rem;margin:.4rem 0;border-radius:6px;border:1px solid #333;background:#0c0c0c;color:#f1f1f1;"></textarea>
-        </label>
-
-        <div style="margin:.6rem 0;">
-          <label><input type="checkbox" name="need_bible" value="yes"> I need a Bible</label><br/>
-          <label><input type="checkbox" name="help_church" value="yes"> Help me find a local church</label>
-        </div>
-
-        <!-- Helpful metadata -->
-        <input type="hidden" name="page" value="I Said Yes">
-        <input type="hidden" name="_subject" value="Dads for Christ — New 'I Said Yes' submission">
-        <!-- Optional: send to a thank-you page if you make one -->
-        <!-- <input type="hidden" name="_redirect" value="https://dadsforchrist.org/thanks.html"> -->
-
-        <button class="btn-gold" type="submit">Send</button>
-      </form>
-
-      <p style="margin-top:1rem;color:#b7c1c9;">We’ll email you within 24–48 hours with encouragement and next steps.</p>
+    <section class="section-tight">
+      <div class="wrap">
+        <form class="card form-card" action="https://formspree.io/f/mdklrnwp" method="POST">
+          <label class="field">Full name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">Email
+            <input type="email" name="_replyto" autocomplete="email" required>
+          </label>
+          <label class="field">City / state (or country)
+            <input type="text" name="location" autocomplete="address-level1">
+          </label>
+          <label class="field">Tell us briefly what God did today
+            <textarea name="story" rows="5"></textarea>
+          </label>
+          <div style="margin-top:0.8rem">
+            <label class="check"><input type="checkbox" name="need_bible" value="yes"> I need a Bible</label>
+            <label class="check"><input type="checkbox" name="help_church" value="yes"> Help me find a local church</label>
+          </div>
+          <input type="hidden" name="page" value="I Said Yes">
+          <input type="hidden" name="_subject" value="Dads for Christ — New I Said Yes submission">
+          <input type="hidden" name="_next" value="https://www.dadsforchrist.org/thanks.html">
+          <div class="cta-row">
+            <button class="btn btn-gold" type="submit">Send</button>
+          </div>
+          <p class="note">We’ll email you within 24–48 hours with encouragement and next steps.</p>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year"></span> Dads for Christ</p>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="footer-brand">Dads for Christ</p>
+        <p>Helping fathers lead their homes back to Jesus.</p>
+        <p>Michigan nonprofit organization.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="mission.html">Mission</a>
+        <a href="blog.html">Blog</a>
+        <a href="store.html">Store</a>
+        <a href="podcast.html">Podcast</a>
+        <a href="bible.html">Free Bible</a>
+        <a href="isaidyes.html">I Said Yes</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-links">
+        <a href="mailto:dadsforchrist@gmail.com">dadsforchrist@gmail.com</a>
+        <a href="https://www.youtube.com/@dadsforchrist42" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://open.spotify.com/show/3HJFIRYgdZORSfpfOyoy1w?si=018067ceb8e44621" target="_blank" rel="noopener noreferrer">Spotify</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <p>© <span data-year>2026</span> Dads for Christ</p>
+      <p>Gifts are currently not tax-deductible until 501(c)(3) approval is complete.</p>
+    </div>
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script src="site.js" defer></script>
 </body>
 </html>

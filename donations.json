@@ -1,0 +1,12 @@
+{
+  "_help": "Paste hosted checkout URLs here (Stripe Payment Links work well on GitHub Pages). Leave a url as an empty string until it is real — the page will show a clearly marked placeholder instead of a broken button. Each suggested amount should have its own link, because a payment link charges the price set in Stripe, not the number printed on the button. oneTimeUrl is an optional open-amount or single one-time gift. monthlyUrl should be a recurring payment link. See README.md.",
+  "oneTimeUrl": "",
+  "monthlyUrl": "",
+  "amounts": [
+    { "label": "$10", "dollars": 10, "url": "" },
+    { "label": "$25", "dollars": 25, "url": "" },
+    { "label": "$50", "dollars": 50, "url": "" },
+    { "label": "$100", "dollars": 100, "url": "" },
+    { "label": "$250", "dollars": 250, "url": "" }
+  ]
+}
