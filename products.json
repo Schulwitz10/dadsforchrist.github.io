@@ -24,40 +24,92 @@
       "note": "Every purchase helps support the mission of Dads for Christ as we strengthen families and share the Gospel. Checkout opens on Stripe, where shipping is added."
     },
     {
-      "id": "reach-one-shirt",
-      "name": "Reach One T-Shirt",
-      "price": "Price not set",
-      "status": "placeholder",
+      "id": "varsity-tee-navy",
+      "name": "Varsity Tee - Navy",
+      "price": "$25 + $5 shipping",
+      "status": "available",
       "featured": false,
-      "image": "img/placeholder-shirt.svg",
-      "imageFallback": "img/placeholder-shirt.svg",
-      "alt": "Placeholder illustration of a t-shirt marked coming soon",
-      "summary": "Room for a future Reach One shirt. This listing is not for sale until a hosted checkout link is added.",
+      "image": "img/tee-varsity-navy.webp",
+      "imageFallback": "img/tee-varsity-navy.webp",
+      "imageWidth": 1000,
+      "imageHeight": 1000,
+      "alt": "Navy blue t-shirt on a light gray background. Arched gold varsity lettering reads DADS FOR CHRIST, with a gold cross and EST. 2018 underneath.",
+      "summary": "A navy tee with arched gold lettering, a cross, and Est. 2018. A straightforward way to wear the mission.",
       "details": [
-        "Not for sale yet",
-        "Checkout link has not been added"
+        "Navy short-sleeve tee",
+        "Gold varsity print",
+        "Cross and Est. 2018",
+        "Supports the mission of Dads for Christ"
       ],
-      "checkoutUrl": "",
-      "checkoutLabel": "Checkout not connected",
-      "note": "Placeholder — this is not a live checkout. Add a Stripe Payment Link or other hosted checkout URL in products.json."
+      "checkoutUrl": "https://buy.stripe.com/dRm3cueRC7Lb2TR7EV7Vm0c",
+      "checkoutLabel": "Buy now — $25",
+      "note": "Sizes S–3XL are chosen at checkout."
     },
     {
-      "id": "reach-one-hat",
-      "name": "Reach One Hat",
-      "price": "Price not set",
-      "status": "placeholder",
+      "id": "dads-tee-black",
+      "name": "DADS Tee - Black",
+      "price": "$25 + $5 shipping",
+      "status": "available",
       "featured": false,
-      "image": "img/placeholder-hat.svg",
-      "imageFallback": "img/placeholder-hat.svg",
-      "alt": "Placeholder illustration of a hat marked coming soon",
-      "summary": "Room for a future Reach One hat. This listing is not for sale until a hosted checkout link is added.",
+      "image": "img/tee-dads-black.webp",
+      "imageFallback": "img/tee-dads-black.webp",
+      "imageWidth": 1000,
+      "imageHeight": 1000,
+      "alt": "Black t-shirt on a light gray background. Large distressed white letters spell DADS, with gold FOR CHRIST and a small cross below.",
+      "summary": "Bold streetwear lettering on a black tee: DADS in white, and FOR CHRIST in gold.",
       "details": [
-        "Not for sale yet",
-        "Checkout link has not been added"
+        "Black short-sleeve tee",
+        "Distressed white and gold print",
+        "DADS across the chest",
+        "Supports the mission of Dads for Christ"
       ],
-      "checkoutUrl": "",
-      "checkoutLabel": "Checkout not connected",
-      "note": "Placeholder — this is not a live checkout. Add a Stripe Payment Link or other hosted checkout URL in products.json."
+      "checkoutUrl": "https://buy.stripe.com/9B614mdNy0iJfGD1gx7Vm0d",
+      "checkoutLabel": "Buy now — $25",
+      "note": "Sizes S–3XL are chosen at checkout."
+    },
+    {
+      "id": "armor-of-god-tee-green",
+      "name": "Armor of God Tee - Military Green",
+      "price": "$25 + $5 shipping",
+      "status": "available",
+      "featured": false,
+      "image": "img/tee-armor-green.webp",
+      "imageFallback": "img/tee-armor-green.webp",
+      "imageWidth": 1000,
+      "imageHeight": 1000,
+      "alt": "Military green t-shirt on a light gray background. A gold shield with a cross sits above distressed cream lettering that reads DADS FOR CHRIST and ARMOR OF GOD - EPH 6:11.",
+      "summary": "A military green tee with a shield and cross, pointing to the armor of God in Ephesians 6:11.",
+      "details": [
+        "Military green short-sleeve tee",
+        "Shield and cross print",
+        "Ephesians 6:11",
+        "Supports the mission of Dads for Christ"
+      ],
+      "checkoutUrl": "https://buy.stripe.com/dRm14m8te7Lb51Z1gx7Vm0e",
+      "checkoutLabel": "Buy now — $25",
+      "note": "Sizes S–3XL are chosen at checkout."
+    },
+    {
+      "id": "faith-flag-tee-tan",
+      "name": "Faith & Flag Tee - Tan",
+      "price": "$25 + $5 shipping",
+      "status": "available",
+      "featured": false,
+      "image": "img/tee-flag-tan.webp",
+      "imageFallback": "img/tee-flag-tan.webp",
+      "imageWidth": 1000,
+      "imageHeight": 1000,
+      "alt": "Tan t-shirt on a light gray background. A distressed flag has a gold cross on a navy canton and gold stripes, above navy lettering that reads DADS FOR CHRIST.",
+      "summary": "A tan tee with a distressed flag and a cross in the canton, over the words Dads for Christ.",
+      "details": [
+        "Tan short-sleeve tee",
+        "Distressed flag and cross",
+        "Navy and gold print",
+        "Supports the mission of Dads for Christ"
+      ],
+      "checkoutUrl": "https://buy.stripe.com/aFa9AS5h22qRcur2kB7Vm0f",
+      "checkoutLabel": "Buy now — $25",
+      "note": "Sizes S–3XL are chosen at checkout."
     }
   ]
 }
