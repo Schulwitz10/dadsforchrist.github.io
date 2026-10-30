@@ -79,11 +79,26 @@
       });
   }
 
+  function priceHtml(price) {
+    var text = String(price || "");
+    var match = text.match(/^(\$\d+(?:\.\d{2})?)\s+(\+\s+\$\d+(?:\.\d{2})?\s+shipping)$/i);
+    if (!match) return escapeHtml(text);
+    return escapeHtml(match[1]) + ' <span class="price-shipping">' + escapeHtml(match[2]) + "</span>";
+  }
+
+  function imageDimension(value, fallback) {
+    var number = parseInt(value, 10);
+    if (!number || number < 1 || number > 8000) return fallback;
+    return number;
+  }
+
   function productCard(product) {
     var live = product.status === "available" && isLiveUrl(product.checkoutUrl);
     var id = escapeHtml(product.id || "product");
     var image = escapeHtml(product.image || "");
     var fallback = escapeHtml(product.imageFallback || product.image || "");
+    var width = imageDimension(product.imageWidth, 1200);
+    var height = imageDimension(product.imageHeight, 800);
     var sourceType = /\.svg($|\?)/i.test(product.image || "") ? "image/svg+xml" : "image/webp";
     var contain = /\.svg($|\?)/i.test(product.image || "") ? " is-contain" : "";
     var details = (product.details || [])
@@ -101,13 +116,13 @@
         '<div class="product-media' + contain + '">' +
           "<picture>" +
             '<source srcset="' + image + '" type="' + sourceType + '">' +
-            '<img src="' + fallback + '" alt="' + escapeHtml(product.alt || product.name || "Product") + '" width="1200" height="800" loading="lazy">' +
+            '<img src="' + fallback + '" alt="' + escapeHtml(product.alt || product.name || "Product") + '" width="' + width + '" height="' + height + '" loading="lazy">' +
           "</picture>" +
         "</div>" +
         '<div class="product-body">' +
           badge +
           "<h3>" + escapeHtml(product.name || "Product") + "</h3>" +
-          '<p class="price">' + escapeHtml(product.price || "") + "</p>" +
+          '<p class="price">' + priceHtml(product.price) + "</p>" +
           "<p>" + escapeHtml(product.summary || "") + "</p>" +
           (details ? '<ul class="clean-list">' + details + "</ul>" : "") +
           action +

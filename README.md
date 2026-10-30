@@ -69,13 +69,14 @@ Each item lives in the `products` array:
 
 | Field | What to put |
 | --- | --- |
-| `id` | Short unique slug, such as `reach-one-hat` |
+| `id` | Short unique slug, such as `faith-flag-tee-tan` |
 | `name` | Name shown on the card |
-| `price` | Text such as `$25.00`. Use `Price not set` until you know it |
+| `price` | Text shown as the price, such as `$10.00` or `$25 + $5 shipping`. Use `Price not set` until you know it |
 | `status` | `available` when it can be bought. `placeholder` when it cannot |
 | `featured` | `true` on the one item that should span the top of the grid |
-| `image` | Path to a WebP, SVG, or other image, such as `img/reach-one.webp` |
-| `imageFallback` | Original PNG (or the same SVG). Spaces in filenames must be written as `%20` |
+| `image` | Path to a WebP, SVG, or other image, such as `img/tee-varsity-navy.webp` |
+| `imageFallback` | Original PNG, or the same WebP. Spaces in filenames must be written as `%20` |
+| `imageWidth` / `imageHeight` | Optional pixel size of the image, used to reserve space on the card |
 | `alt` | What the picture shows, for screen readers |
 | `summary` | Short description |
 | `details` | A list of short lines |
@@ -89,16 +90,23 @@ The Reach One bracelet already has a live Stripe Payment Link:
 
 That link charges $10.00 for the bracelet. Stripe adds shipping on the checkout page (currently $2.99).
 
-The shirt and hat are **placeholders**. Their buttons stay disabled and say “Checkout not connected” until you add a real URL and set `status` to `available`.
+Four tees are live at **$25 + $5 shipping**. Sizes S–3XL are chosen on the Stripe checkout page. Card photos are WebP files in `img/`.
+
+| Tee | Payment Link |
+| --- | --- |
+| Varsity Tee - Navy | `https://buy.stripe.com/dRm3cueRC7Lb2TR7EV7Vm0c` |
+| DADS Tee - Black | `https://buy.stripe.com/9B614mdNy0iJfGD1gx7Vm0d` |
+| Armor of God Tee - Military Green | `https://buy.stripe.com/dRm14m8te7Lb51Z1gx7Vm0e` |
+| Faith & Flag Tee - Tan | `https://buy.stripe.com/aFa9AS5h22qRcur2kB7Vm0f` |
 
 ### Plug in a real checkout link
 
 Any hosted checkout URL works. Stripe Payment Links are the simplest fit for GitHub Pages, because the customer pays on Stripe and this site never handles a card.
 
-1. In the [Stripe Dashboard](https://dashboard.stripe.com/payment-links), create a product (for example “Reach One T-Shirt”) with the price you will charge.
+1. In the [Stripe Dashboard](https://dashboard.stripe.com/payment-links), create a product with the price you will charge.
 2. Create a Payment Link for that product and copy the `https://buy.stripe.com/...` URL.
 3. In `products.json`, paste that URL into `checkoutUrl`.
-4. Set `status` to `available`, set `price` and `checkoutLabel`, and replace the placeholder image if you have a photo.
+4. Set `status` to `available`, set `price` and `checkoutLabel`, and point `image` at a photo in `img/` (WebP, about 1000px wide).
 5. Commit and push to the branch GitHub Pages publishes (usually `main`).
 
 A Shopify checkout URL, a print-on-demand product link (Printful, Spring, and similar), or any other `https://` payment page can go in `checkoutUrl` the same way. The button opens that page in a new tab. Empty URLs, and URLs that still contain `YOUR_` or `PLACEHOLDER`, are treated as not connected.
