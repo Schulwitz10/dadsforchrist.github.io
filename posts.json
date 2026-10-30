@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-10-30",
+      "dateLabel": "",
+      "title": "More Than a Paycheck",
+      "slug": "more-than-a-paycheck",
+      "url": "blog/2026-10-30-more-than-a-paycheck.html",
+      "excerpt": "A paycheck can keep a household, and God calls a father to provide. Children still need his time, his attention, and a man who will lead them to Jesus.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-10-29",
       "title": "Stay in the Room",
       "slug": "stay-in-the-room",
