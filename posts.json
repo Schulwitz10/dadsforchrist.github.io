@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-10-31",
+      "dateLabel": "",
+      "title": "Pray With Her",
+      "slug": "pray-with-her",
+      "url": "blog/2026-10-31-pray-with-her.html",
+      "excerpt": "Husbands and wives face real battles together. A husband who takes the lead in praying with his wife strengthens the marriage and the home.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-10-30",
       "dateLabel": "",
       "title": "More Than a Paycheck",
