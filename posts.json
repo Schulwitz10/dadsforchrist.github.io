@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-03",
+      "dateLabel": "",
+      "title": "Teach Them Diligently",
+      "slug": "teach-them-diligently",
+      "url": "blog/2026-11-03-teach-them-diligently.html",
+      "excerpt": "Faith is handed down at the dinner table, in the truck, and at bedtime, when a man talks of God's words there and not only on Sunday.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-02",
       "dateLabel": "",
       "title": "A Place of Refuge",
