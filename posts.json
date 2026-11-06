@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-06",
+      "dateLabel": "",
+      "title": "Love Her as Christ",
+      "slug": "love-her-as-christ",
+      "url": "blog/2026-11-06-love-her-as-christ.html",
+      "excerpt": "A man who loves his wife as Christ loved the church spends himself for her good, and that love steadies the marriage, teaches the children, and gives the home the shape of Jesus.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-05",
       "dateLabel": "",
       "title": "A Soft Answer",
