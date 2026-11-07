@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-07",
+      "dateLabel": "",
+      "title": "Do Not Grow Weary",
+      "slug": "do-not-grow-weary",
+      "url": "blog/2026-11-07-do-not-grow-weary.html",
+      "excerpt": "The long work of a husband and a present father can make a man want to quit. Galatians 6:9 calls him to keep doing good at home, and a wife, a child, and a house are steadied when he does not give up.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-06",
       "dateLabel": "",
       "title": "Love Her as Christ",
