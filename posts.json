@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-09",
+      "dateLabel": "",
+      "title": "Go After the One",
+      "slug": "go-after-the-one",
+      "url": "blog/2026-11-09-go-after-the-one.html",
+      "excerpt": "Jesus leaves the ninety and nine to go after the one lost sheep. The first mission field for a man is his own home, then the one man who has wandered from God, and being present is how he goes after them.",
+      "image": "img/reach-one.webp",
+      "imageAlt": "Black woven Reach One bracelets on a wooden table. One band reads REACH ONE and the other has a shepherd's hook tag, beside a Bible."
+    },
+    {
       "date": "2026-11-08",
       "dateLabel": "",
       "title": "As for Me and My House",
