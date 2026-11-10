@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-10",
+      "dateLabel": "",
+      "title": "Two Are Better Than One",
+      "slug": "two-are-better-than-one",
+      "url": "blog/2026-11-10-two-are-better-than-one.html",
+      "excerpt": "A husband and wife face stress, money, illness, conflict, and spiritual attack together. Ecclesiastes 4:9–12 calls a man to stand with his wife, with Christ as the third strand, so his wife, his children, and his home are held.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-09",
       "dateLabel": "",
       "title": "Go After the One",
