@@ -279,6 +279,40 @@ code {
 
 .btn-ghost-light:hover { background: #f7f3eb; color: var(--navy); }
 
+.btn-lg {
+  min-height: 56px;
+  padding: 0.9rem 1.65rem;
+  font-size: 1.12rem;
+}
+
+#thanksgiving {
+  scroll-margin-top: 84px;
+}
+
+.band-thanks {
+  background: #efe4cf;
+  border-top: 4px solid var(--gold);
+  border-bottom: 4px solid var(--gold);
+}
+
+.thanks-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  color: var(--navy);
+  margin: 0 0 1.1rem;
+}
+
+.thanksgiving-media {
+  max-width: 520px;
+  justify-self: center;
+}
+
+.thanksgiving-callout .cta-row {
+  margin-top: 0.9rem;
+}
+
 .btn-placeholder,
 .btn:disabled {
   background: transparent;
@@ -661,6 +695,7 @@ textarea { min-height: 140px; resize: vertical; }
 @media (min-width: 800px) {
   .split { grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
   .split-60 { grid-template-columns: 1.1fr 0.9fr; gap: 2.4rem; align-items: center; }
+  .band-thanks .split-60 { align-items: start; }
   .footer-grid { grid-template-columns: 1.3fr 1fr 0.8fr; }
 }
 
@@ -705,6 +740,7 @@ textarea { min-height: 140px; resize: vertical; }
   .product-card.featured { grid-template-columns: 1fr; }
   .product-card.featured .product-media { aspect-ratio: 3 / 2; min-height: 0; }
   .section { padding: 3rem 0; }
+  .thanksgiving-media { max-width: 360px; }
 }
 
 .post-card img {
