@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-11",
+      "dateLabel": "",
+      "title": "Turn the Hearts",
+      "slug": "turn-the-hearts",
+      "url": "blog/2026-11-11-turn-the-hearts.html",
+      "excerpt": "Malachi 4:6 and Luke 1:17 call for a father's heart to turn toward his children. When that turning is real, a child is known, a wife is no longer alone in the raising, and a home is made ready for the Lord.",
+      "image": "img/share-family.jpg",
+      "imageAlt": "A father reading the Bible with his son and daughter at the kitchen table"
+    },
+    {
       "date": "2026-11-10",
       "dateLabel": "",
       "title": "Two Are Better Than One",
