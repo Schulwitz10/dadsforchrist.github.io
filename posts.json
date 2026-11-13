@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-13",
+      "dateLabel": "",
+      "title": "Iron Sharpens Iron",
+      "slug": "iron-sharpens-iron",
+      "url": "blog/2026-11-13-iron-sharpens-iron.html",
+      "excerpt": "A man was never meant to fight for his marriage, his children, and his faith alone. Proverbs 27:17 calls him to walk with godly men who sharpen, confess, and pray, so he comes home more present and steadier, and goes after the one man who has drifted.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-12",
       "dateLabel": "",
       "title": "Stand Fast",
