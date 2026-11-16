@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-16",
+      "dateLabel": "",
+      "title": "Call Her Blessed",
+      "slug": "call-her-blessed",
+      "url": "blog/2026-11-16-call-her-blessed.html",
+      "excerpt": "Proverbs 31:28 calls a husband to praise his wife where she can hear it, and Numbers 6:24–26 is a blessing a present man can pray over his children. When his mouth gives life, his wife is honored, his children are named with hope, and the home takes a gentler tone.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-13",
       "dateLabel": "",
       "title": "Iron Sharpens Iron",
