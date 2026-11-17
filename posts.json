@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-17",
+      "dateLabel": "",
+      "title": "Provoke Not Your Children",
+      "slug": "provoke-not-your-children",
+      "url": "blog/2026-11-17-provoke-not-your-children.html",
+      "excerpt": "Ephesians 6:4 and Colossians 3:21 call a man not to provoke his children to anger, but to bring them up in the nurture and admonition of the Lord. When he is present and patient, the children are not discouraged, his wife is not left alone in the home, and the house learns gentleness instead of wrath.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-16",
       "dateLabel": "",
       "title": "Call Her Blessed",
