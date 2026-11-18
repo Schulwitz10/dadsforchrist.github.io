@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-18",
+      "dateLabel": "",
+      "title": "Fight for Your House",
+      "slug": "fight-for-your-house",
+      "url": "blog/2026-11-18-fight-for-your-house.html",
+      "excerpt": "Nehemiah 4:14 calls a man not to be afraid, but to remember the Lord and fight for his brethren, his sons, his daughters, his wife, and his house. He stands that post by being present and praying beside his wife, one hand on the work and the other on the watch, instead of withdrawing when pressure, discouragement, and spiritual attack come.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-17",
       "dateLabel": "",
       "title": "Provoke Not Your Children",
