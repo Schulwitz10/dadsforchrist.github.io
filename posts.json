@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-19",
+      "dateLabel": "",
+      "title": "Redeeming the Time",
+      "slug": "redeeming-the-time",
+      "url": "blog/2026-11-19-redeeming-the-time.html",
+      "excerpt": "Ephesians 5:15–16 calls a man to walk circumspectly and redeem the time, because the days are evil, and Psalm 90:12 asks God to teach him to number his days. The hours with his wife and children are a stewardship to spend now, with the phone down, at the table, in bedtime prayer, and listening, instead of handing the house only what a busy day leaves over.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-18",
       "dateLabel": "",
       "title": "Fight for Your House",
