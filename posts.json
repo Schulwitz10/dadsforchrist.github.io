@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-21",
+      "dateLabel": "",
+      "title": "Carry It Together",
+      "slug": "carry-it-together",
+      "url": "blog/2026-11-21-carry-it-together.html",
+      "excerpt": "Galatians 6:2 calls a man to bear one another’s burdens and so fulfil the law of Christ. When a husband asks what his wife is carrying and takes a real weight beside her, she has a partner in the battle, the children who watch learn that love stays and lifts, and the home shares a load that was meant for two.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-20",
       "dateLabel": "",
       "title": "Dwell With Her",
