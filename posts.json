@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-22",
+      "dateLabel": "",
+      "title": "Into the House of the Lord",
+      "slug": "into-the-house-of-the-lord",
+      "url": "blog/2026-11-22-into-the-house-of-the-lord.html",
+      "excerpt": "Psalm 122:1 calls a man to be glad when he is invited into the house of the Lord, and Hebrews 10:24–25 calls him not to forsake the assembling of God’s people. When he leads his household in and sits under the Word with them, his wife is not left to carry the family’s faith alone, the children learn that worship matters by watching where he goes, and Sunday sets the tone of the week.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-21",
       "dateLabel": "",
       "title": "Carry It Together",
