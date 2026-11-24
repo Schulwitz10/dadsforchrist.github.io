@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-24",
+      "dateLabel": "",
+      "title": "Round About Thy Table",
+      "slug": "round-about-thy-table",
+      "url": "blog/2026-11-24-round-about-thy-table.html",
+      "excerpt": "Psalm 128:1–4 calls the man who fears the LORD and walks in His ways blessed, with his wife as a fruitful vine and his children like olive plants round about his table. This Thanksgiving week, a man is needed at that table and not only in the house: phone down, leading grace and conversation, so his wife does not carry the table alone, his children are tended where they grow, and one man who may be alone is invited in.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-23",
       "dateLabel": "",
       "title": "In Every Thing Give Thanks",
