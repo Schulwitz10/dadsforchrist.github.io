@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-25",
+      "dateLabel": "",
+      "title": "When Thou Hast Eaten",
+      "slug": "when-thou-hast-eaten",
+      "url": "blog/2026-11-25-when-thou-hast-eaten.html",
+      "excerpt": "Deuteronomy 8:10–11 calls a man who has eaten and is full to bless the LORD his God for the good He has given, and to beware that he forget Him. The day before Thanksgiving, he leads his household in that remembering: blessing the Lord after the meal, telling his children what God has done, standing beside his wife in thankfulness, and remembering the one man who will sit at an empty table.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-24",
       "dateLabel": "",
       "title": "Round About Thy Table",
