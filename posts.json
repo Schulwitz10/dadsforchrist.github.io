@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-26",
+      "dateLabel": "",
+      "title": "Returned to Bless His House",
+      "slug": "returned-to-bless-his-house",
+      "url": "blog/2026-11-26-returned-to-bless-his-house.html",
+      "excerpt": "First Chronicles 16:43 says that all the people departed, every man to his house, and David returned to bless his house. On Thanksgiving Day, after the worship and the crowds, the ministry that matters most is going home: being present, speaking blessing over a wife and children, leading thanksgiving at his own table, staying soft when he is met with conflict, and remembering the one man who has no house to go home to.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-25",
       "dateLabel": "",
       "title": "When Thou Hast Eaten",
