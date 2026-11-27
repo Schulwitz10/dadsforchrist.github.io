@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-27",
+      "dateLabel": "",
+      "title": "Where Your Treasure Is",
+      "slug": "where-your-treasure-is",
+      "url": "blog/2026-11-27-where-your-treasure-is.html",
+      "excerpt": "Matthew 6:21 says that where your treasure is, there will your heart be also. On the day after Thanksgiving, while the world chases things to buy, a man’s family needs his presence more than his presents: children remember time and attention, a husband and wife fight money’s pressure side by side, faith is invested through prayer and Scripture, and time is given to one man who is struggling or alone.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-26",
       "dateLabel": "",
       "title": "Returned to Bless His House",
