@@ -2,6 +2,16 @@
   "_help": "Newest first. Add a post by copying blog/_TEMPLATE.html to blog/YYYY-MM-DD-slug.html, then put a new object at the top of posts. date is YYYY-MM-DD. dateLabel is optional display text. url must match the file. image may be an empty string. See README.md.",
   "posts": [
     {
+      "date": "2026-11-28",
+      "dateLabel": "",
+      "title": "Come Apart and Rest a While",
+      "slug": "come-apart-and-rest-a-while",
+      "url": "blog/2026-11-28-come-apart-and-rest-a-while.html",
+      "excerpt": "In Mark 6:31 Jesus told His tired disciples, “Come ye yourselves apart into a desert place, and rest a while.” On the quiet weekend after Thanksgiving, a man can stop running long enough to actually be with his family: resting without disappearing, slowing down beside his wife, giving his children unhurried time, letting God lead his rest, and making room for the one man who is running on empty.",
+      "image": "img/blog.webp",
+      "imageAlt": "An open Bible, a journal with a pen, and a mug on a wooden table."
+    },
+    {
       "date": "2026-11-27",
       "dateLabel": "",
       "title": "Where Your Treasure Is",
